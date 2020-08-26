@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Data.Drinks
+namespace BleakwindBuffet.Data.Drinks
 {
-    class CandlehearthCoffee
+    public class CandlehearthCoffee
     {
     }
 }

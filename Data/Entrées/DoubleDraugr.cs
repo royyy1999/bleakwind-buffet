@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Data.Entrées
+namespace DaBleakwindBuffet.Data.Entrees
 {
-    class DoubleDraugr
+    public class DoubleDraugr
     {
     }
 }

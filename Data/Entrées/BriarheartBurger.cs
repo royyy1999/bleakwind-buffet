@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Data.Entrées
+namespace BleakwindBuffet.Data.Entrees
 {
-    class BriarheartBurger
+    public class BriarheartBurger
     {
+        private bool broccoli = true;
+        private bool mushrooms = true;
+        private bool tomato = true;
+        private bool cheddar = true;
+
     }
 }
