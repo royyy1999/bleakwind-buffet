@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BleakwindBuffet.Data.Drinks
+namespace DatBleakwindBuffet.Data.Drinks
 {
-    public class AretinoAppleJuice
+    public class ArentinoAppleJuice
     {
+
     }
 }
