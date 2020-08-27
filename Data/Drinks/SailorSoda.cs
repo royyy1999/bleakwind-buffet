@@ -33,34 +33,52 @@ namespace BleakwindBuffet.Data.Drinks
             }
             set
             {
-                
+                flavor = value;
             }
         }
         public double Price 
         {
             get
             {
-                size = Size.Small;
-                return size;
-            }
-
-            set
-            {
-                Size.Small = 1.42;
-            }
+                if (size == Size.Small)
+                {
+                    return 1.42;
+                }
+                if (size == Size.Medium)
+                {
+                    return 1.74;
+                }
+                if (size == Size.Large)
+                {
+                    return 2.07;
+                }
+                else
+                {
+                    throw new NotImplementedException();
+                }
+            }        
         }
 
         public uint Calories
         {
             get
             {
-               
-                
-            }
-
-            set
-            {
-               
+                 if(size == Size.Small)
+                {
+                    return 117;
+                }           
+                if(size == Size.Medium)
+                {
+                    return 153;
+                }
+                if(size == Size.Large)
+                {
+                    return 205;
+                }
+                 else
+                {
+                    throw new NotImplementedException();
+                }
             }
         }
 
@@ -76,7 +94,7 @@ namespace BleakwindBuffet.Data.Drinks
 
         public override string ToString()
         {
-            return "";
+            return (Size.ToString() + " " + Flavor.ToString() + " Sailor Soda");
         }
     }
 }
