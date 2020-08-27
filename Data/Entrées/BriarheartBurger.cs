@@ -6,11 +6,6 @@ namespace BleakwindBuffet.Data.Entrees
 {
     public class BriarheartBurger
     {
-        private bool broccoli = true;
-        private bool mushrooms = true;
-        private bool tomato = true;
-        private bool cheddar = true;
-
         /// <summary>
         /// Gets the price of the burger
         /// </summary>
