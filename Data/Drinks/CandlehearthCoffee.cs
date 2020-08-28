@@ -1,5 +1,5 @@
 ﻿/* Author: Roy Fernandez
- * Class name: CandlehearthCoffe.cs
+ * Class name: CandlehearthCoffee.cs
  * Purpose: Class used to represent properties of CandlehearthCoffe.
  */
 using BleakwindBuffet.Data.Enums;

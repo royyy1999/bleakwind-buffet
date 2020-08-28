@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Author: Roy Fernandez
+ * Class name: GardenOrcOmelette.cs
+ * Purpose: Class used to represent properties of the Garden Orc Omelette.
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
