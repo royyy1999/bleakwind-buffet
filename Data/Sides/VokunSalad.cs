@@ -1,14 +1,25 @@
-﻿using BleakwindBuffet.Data.Enums;
+﻿/* Author: Roy Fernandez
+ * Class name: VokunSalad.cs
+ * Purpose: Class used to represent properties of the salad.
+ */
+using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace BleakwindBuffet.Data.Sides
 {
+
     public class VokunSalad
     {
+        /// <summary>
+        /// Backing variable for size of salad.
+        /// </summary>
         private Size size = Size.Small;
 
+        /// <summary>
+        /// Gets and sets the size of the salad
+        /// </summary>
         public Size Size
         {
             get
@@ -21,6 +32,9 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
+        /// <summary>
+        /// Assigns the price to each of the the salad sizes.
+        /// </summary>
         public double Price
         {
             get
@@ -42,8 +56,11 @@ namespace BleakwindBuffet.Data.Sides
                     throw new NotImplementedException();
                 }
             }
-        //}
+        }
 
+        /// <summary>
+        /// Assigns calories to each salad size.
+        /// </summary>
         public uint Calories
         {
             get
@@ -66,6 +83,10 @@ namespace BleakwindBuffet.Data.Sides
                 }
             }
         }
+
+        /// <summary>
+        /// Returns a List of special instructions of the order. 
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -75,6 +96,10 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
+        /// <summary>
+        /// Converts the users order to a string.
+        /// </summary>
+        /// <returns>Users order</returns>
         public override string ToString()
         {
             return (Size.ToString() + " Vokun Salad");

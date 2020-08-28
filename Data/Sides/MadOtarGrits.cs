@@ -1,4 +1,8 @@
-﻿using BleakwindBuffet.Data.Enums;
+﻿/* Author: Roy Fernandez
+ * Class name: MadOtarGrits.cs
+ * Purpose: Class used to represent properties of the cheesy grits.
+ */
+using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,8 +11,14 @@ namespace BleakwindBuffet.Data.Sides
 {
     public class MadOtarGrits
     {
+        /// <summary>
+        /// Backing variable for the size of the side
+        /// </summary>
         private Size size = Size.Small;
 
+        /// <summary>
+        /// Gets and sets the size size of the order
+        /// </summary>
         public Size Size
         {
             get
@@ -21,6 +31,9 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
+        /// <summary>
+        /// Assigns the price to the size ordered.
+        /// </summary>
         public double Price
         {
             get
@@ -44,6 +57,9 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
+        /// <summary>
+        /// Gives calorie information for the size ordered.
+        /// </summary>
         public uint Calories
         {
             get
@@ -66,6 +82,10 @@ namespace BleakwindBuffet.Data.Sides
                 }
             }
         }
+
+        /// <summary>
+        /// Returns a List of special instructions of the order.
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -75,6 +95,11 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
+
+        /// <summary>
+        /// Converts users order to a string.
+        /// </summary>
+        /// <returns>Users order</returns>
         public override string ToString()
         {
             return (Size.ToString() + " Mad Otar Grits");

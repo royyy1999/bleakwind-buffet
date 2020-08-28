@@ -1,4 +1,8 @@
-﻿using BleakwindBuffet.Data.Enums;
+﻿/* Author: Roy Fernandez
+ * Class name: CandlehearthCoffe.cs
+ * Purpose: Class used to represent properties of CandlehearthCoffe.
+ */
+using BleakwindBuffet.Data.Enums;
 using DataBleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
@@ -8,9 +12,19 @@ namespace BleakwindBuffet.Data.Drinks
 {
     public class CandlehearthCoffee
     {
+        /// <summary>
+        /// Boolean property for ice in drink
+        /// </summary>
         public bool Ice { get; set; } = false;
 
+        /// <summary>
+        /// Backing variable for size of drink
+        /// </summary>
         private Size size = Size.Small;
+
+        /// <summary>
+        /// Gets and sets size of drink ordered
+        /// </summary>
         public Size Size
         {
             get
@@ -24,6 +38,9 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
+        /// <summary>
+        /// Assigns price to size of drink
+        /// </summary>
         public double Price
         {
             get
@@ -47,6 +64,9 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
+        /// <summary>
+        /// Gives calorie information for size of drink 
+        /// </summary>
         public uint Calories
         {
             get
@@ -70,10 +90,19 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
+        /// <summary>
+        /// Boolean property for if theres room for cream in the coffee.
+        /// </summary>
         public bool RoomForCream { get; set; } = false;
 
+        /// <summary>
+        /// Boolean property for a decaf coffee.
+        /// </summary>
         public bool Decaf { get; set; } = false; 
 
+        /// <summary>
+        /// Returns a List of special instructions of coffee
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -85,6 +114,10 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
+        /// <summary>
+        /// Type of coffee ordered by user
+        /// </summary>
+        /// <returns>Users coffee</returns>
         public override string ToString()
         {
             if (!Decaf)

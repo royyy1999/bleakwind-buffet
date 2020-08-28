@@ -1,4 +1,8 @@
-﻿using BleakwindBuffet.Data.Enums;
+﻿/* Author: Roy Fernandez
+ * Class name: SailorSoda.cs
+ * Purpose: Class used to represent properties of the Sailor Soda.
+ */
+using BleakwindBuffet.Data.Enums;
 using DataBleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
@@ -8,9 +12,19 @@ namespace BleakwindBuffet.Data.Drinks
 {
     public class SailorSoda
     {
+        /// <summary>
+        /// Boolean property for ice in drink
+        /// </summary>
         public bool Ice { get; set; } = true; 
 
+        /// <summary>
+        /// Backing variable for size of drink
+        /// </summary>
         private Size size = Size.Small;
+
+        /// <summary>
+        /// Gets and sets size of drink ordered
+        /// </summary>
         public Size Size
         {
             get
@@ -24,7 +38,14 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
+        /// <summary>
+        /// Backing variable for flavore of drink
+        /// </summary>
         private SodaFlavor flavor = SodaFlavor.Cherry;
+
+        /// <summary>
+        /// Gets and sets flavor of drink ordered
+        /// </summary>
         public SodaFlavor Flavor
         {
             get
@@ -36,6 +57,10 @@ namespace BleakwindBuffet.Data.Drinks
                 flavor = value;
             }
         }
+
+        /// <summary>
+        /// Assigns price to size of drink ordered
+        /// </summary>
         public double Price 
         {
             get
@@ -59,6 +84,9 @@ namespace BleakwindBuffet.Data.Drinks
             }        
         }
 
+        /// <summary>
+        /// Gives calorie information for size of drink.
+        /// </summary>
         public uint Calories
         {
             get
@@ -82,6 +110,9 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
+        /// <summary>
+        /// Returns a List of special instructions of drink.
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -92,6 +123,10 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
+        /// <summary>
+        /// Converts users order to a string.
+        /// </summary>
+        /// <returns>Users drink</returns>
         public override string ToString()
         {
             return (Size.ToString() + " " + Flavor.ToString() + " Sailor Soda");

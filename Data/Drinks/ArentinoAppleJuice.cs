@@ -1,4 +1,9 @@
-﻿using BleakwindBuffet.Data.Enums;
+﻿/* Author: Roy Fernandez
+ * Class name: ArentinoAppleJuice.cs
+ * Purpose: Class used to represent properties of Arentino Apple Juice.
+ */
+
+using BleakwindBuffet.Data.Enums;
 using DataBleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
@@ -8,9 +13,19 @@ namespace DatBleakwindBuffet.Data.Drinks
 {
     public class ArentinoAppleJuice
     {
+        /// <summary>
+        /// Boolean property of ice in drink
+        /// </summary>
         public bool Ice { get; set; } = false;
 
+        /// <summary>
+        /// Back variable for size of drink
+        /// </summary>
         private Size size = Size.Small;
+
+        /// <summary>
+        /// Gets and sets size of drink
+        /// </summary>
         public Size Size
         {
             get
@@ -24,6 +39,9 @@ namespace DatBleakwindBuffet.Data.Drinks
             }
         }
 
+        /// <summary>
+        /// Assigns price to size of drink 
+        /// </summary>
         public double Price
         {
             get
@@ -47,6 +65,9 @@ namespace DatBleakwindBuffet.Data.Drinks
             }
         }
 
+        /// <summary>
+        /// Gives calorie information of size of drink
+        /// </summary>
         public uint Calories
         {
             get
@@ -70,6 +91,9 @@ namespace DatBleakwindBuffet.Data.Drinks
             }
         }
 
+        /// <summary>
+        /// Returns a List of special instructions of drink
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -80,6 +104,10 @@ namespace DatBleakwindBuffet.Data.Drinks
             }
         }
 
+        /// <summary>
+        /// Converts users order to a string
+        /// </summary>
+        /// <returns>Users drink</returns>
         public override string ToString()
         {
             return (Size.ToString() + " Arentino Apple Juice");

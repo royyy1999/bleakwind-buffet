@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Author: Roy Fernandez
+ * Class name: ThugsTBone.cs
+ * Purpose: Class used to represent properties of Thugs T-Bone.
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -16,6 +20,9 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public uint Calories => 982;
 
+        /// <summary>
+        /// Returns an empty list.
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -25,6 +32,10 @@ namespace BleakwindBuffet.Data.Entrees
             }
         }
 
+        /// <summary>
+        /// Name of entree ordered
+        /// </summary>
+        /// <returns>Users order</returns>
         public override string ToString()
         {
             return "Thugs T-Bone";

@@ -16,16 +16,30 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public uint Calories => 404;
 
+        /// <summary>
+        /// Boolean property for broccoli on omelette
+        /// </summary>
         public bool Broccoli { get; set; } = true;
 
+        /// <summary>
+        /// Boolean property for mushrooms on omelette
+        /// </summary>
         public bool Mushrooms{ get; set; } = true;
 
+        /// <summary>
+        /// Boolean property for tomatos on omelette
+        /// </summary>
         public bool Tomato { get; set; } = true;
 
+        /// <summary>
+        /// Boolean property for cheddar on omelette
+        /// </summary>
         public bool Cheddar { get; set; } = true;
 
 
-
+        /// <summary>
+        /// Returns a List of special instructions for omelette.
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -38,7 +52,11 @@ namespace BleakwindBuffet.Data.Entrees
                 return instructions;
             }
         }
-
+        
+        /// <summary>
+        /// Converts users order to a string
+        /// </summary>
+        /// <returns>Users order</returns>
         public override string ToString()
         {
             return "Garden Orc Omelette";
