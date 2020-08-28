@@ -14,7 +14,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets the calories of the burger
         /// </summary>
-        public uint Calories => 732;
+        public uint Calories => 743;
 
         public bool Bun{ get; set; } = true;
 
