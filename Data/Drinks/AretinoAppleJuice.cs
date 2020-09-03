@@ -1,17 +1,16 @@
 ﻿/* Author: Roy Fernandez
- * Class name: ArentinoAppleJuice.cs
+ * Class name: AretinoAppleJuice.cs
  * Purpose: Class used to represent properties of Arentino Apple Juice.
  */
 
 using BleakwindBuffet.Data.Enums;
-using DataBleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DatBleakwindBuffet.Data.Drinks
+namespace BleakwindBuffet.Data.Drinks
 {
-    public class ArentinoAppleJuice
+    public class AretinoAppleJuice
     {
         /// <summary>
         /// Boolean property of ice in drink

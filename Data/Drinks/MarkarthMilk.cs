@@ -3,7 +3,6 @@
  * Purpose: Class used to represent properties of Markarth Milk.
  */
 using BleakwindBuffet.Data.Enums;
-using DataBleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
