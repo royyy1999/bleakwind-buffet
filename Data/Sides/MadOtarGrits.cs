@@ -34,6 +34,9 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Assigns the price to the size ordered.
         /// </summary>
+        /// <exception cref="System.NotImplementedException">
+        /// Thrown if the price for the size is not known
+        /// </exception>
         public double Price
         {
             get
@@ -60,6 +63,9 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Gives calorie information for the size ordered.
         /// </summary>
+        /// /// <exception cref="System.NotImplementedException">
+        /// Thrown if the calories for the size is not known
+        /// </exception>
         public uint Calories
         {
             get

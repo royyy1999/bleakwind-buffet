@@ -30,10 +30,13 @@ namespace BleakwindBuffet.Data.Sides
                 size = value;
             }
         }
-        
+
         /// <summary>
         /// Assigns the price to the size of the side ordered.
         /// </summary>
+        /// <exception cref="System.NotImplementedException">
+        /// Thrown if the price for the size is not known
+        /// </exception>
         public double Price
         {
             get
@@ -60,6 +63,9 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Gives calorie information for size of the side ordered.
         /// </summary>
+        /// <exception cref="System.NotImplementedException">
+        /// Thrown if the calories for the size is not known
+        /// </exception>
         public uint Calories
         {
             get

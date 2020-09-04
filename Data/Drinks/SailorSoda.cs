@@ -60,6 +60,9 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Assigns price to size of drink ordered
         /// </summary>
+        /// <exception cref="System.NotImplementedException">
+        /// Thrown if the price for the size is not known
+        /// </exception>
         public double Price 
         {
             get
@@ -86,6 +89,9 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gives calorie information for size of drink.
         /// </summary>
+        /// <exception cref="System.NotImplementedException">
+        /// Thrown if the calories for the size is not known
+        /// </exception>
         public uint Calories
         {
             get
