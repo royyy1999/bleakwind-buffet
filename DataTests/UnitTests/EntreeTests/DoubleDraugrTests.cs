@@ -182,7 +182,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 
             if (includeBun && includeKetchup && includeMustard && includePickle && includeCheese && includeTomato && includeLettuce && includeMayo)
             {
-                Assert.Contatins(bb.SpecialInstructions);
+                Assert.Contatins(dd.SpecialInstructions);
             }
 
             if (!includeBun && !includeKetchup && !includeMustard && !includePickle && !includeCheese && !includeTomato && !includeLettuce && !includeMayo)
