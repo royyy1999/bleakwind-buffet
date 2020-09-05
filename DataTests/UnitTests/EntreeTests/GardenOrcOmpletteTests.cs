@@ -91,7 +91,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         public void ShouldReturnCorrectCalories()
         {
             GardenOrcOmelette go = new GardenOrcOmelette();
-            Assert.Equal(404, go.Calories);
+            Assert.Equal(404.0, go.Calories);
         }
 
         [Theory]
@@ -113,10 +113,10 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 
             if (!includeBroccoli && !includeMushrooms && !includeTomato && !includeCheddar)
             {
-                Assert.Conatins("Hold broccoli", go.SpecialInstructions);
-                Assert.Conatins("Hold mushrooms", go.SpecialInstructions);
-                Assert.Conatins("Hold tomato", go.SpecialInstructions);
-                Assert.Conatins("Hold cheddar", go.SpecialInstructions);
+                Assert.Contains("Hold broccoli", go.SpecialInstructions);
+                Assert.Contains("Hold mushrooms", go.SpecialInstructions);
+                Assert.Contains("Hold tomato", go.SpecialInstructions);
+                Assert.Contains("Hold cheddar", go.SpecialInstructions);
             }
 
         }
@@ -125,7 +125,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         public void ShouldReturnCorrectToString()
         {
             GardenOrcOmelette go = new GardenOrcOmelette();
-            Asser.Equal("Garden Orc Omelette", go.SpecialInstructions);
+            Assert.Equal("Garden Orc Omelette", go.ToString());
         }
     }
 }

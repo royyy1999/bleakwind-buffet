@@ -193,17 +193,17 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
                 Assert.Contains("Hold mustard", dd.SpecialInstructions);
                 Assert.Contains("Hold pickle", dd.SpecialInstructions);
                 Assert.Contains("Hold cheese", dd.SpecialInstructions);
-                Assert.Conatins("Hold lettuce", dd.SpecialInstrucations);
-                Assert.Conatins("Hold tomato", dd.SpecialInstructions);
-                Assert.Conatins("Hold mayo", dd.SpecialInstructions);
+                Assert.Contains("Hold lettuce", dd.SpecialInstructions);
+                Assert.Contains("Hold tomato", dd.SpecialInstructions);
+                Assert.Contains("Hold mayo", dd.SpecialInstructions);
             }
         }
 
         [Fact]
         public void ShouldReturnCorrectToString()
         {
-            DoubleDraugrTests dd = new DoubleDraugrTests();
-            Assert.Equal("Double Draugr", dd.String());
+            DoubleDraugr dd = new DoubleDraugr();
+            Assert.Equal("Double Draugr", dd.ToString());
         }
     }
 }

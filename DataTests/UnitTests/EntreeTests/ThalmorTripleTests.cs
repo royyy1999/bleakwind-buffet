@@ -5,7 +5,7 @@
  * Purpose: Test the ThalmorTriple.cs class in the Data library
  */
 using Xunit;
-using BleakwindBuffet.DataTests.Entrees;
+using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
@@ -187,14 +187,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         public void ShouldReturnCorrectPrice()
         {
             ThalmorTriple tt = new ThalmorTriple();
-            Assert.Equals(8.32, tt.Price);
+            Assert.Equal(8.32, tt.Price);
         }
 
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
             ThalmorTriple tt = new ThalmorTriple();
-            Assert.Equal(943, tt.Calories);
+            Assert.Equal(943.0, tt.Calories);
         }
 
         [Theory]
@@ -222,25 +222,25 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
                 Assert.Empty(tt.SpecialInstructions);
             }
 
-            if (!includeBun && !includeKetchup && !includeMustard && !includePickle && !includeCheese && !includeTomato && !includeLettuce && !includeMayo && !includeBacon && !includeEg)
+            if (!includeBun && !includeKetchup && !includeMustard && !includePickle && !includeCheese && !includeTomato && !includeLettuce && !includeMayo && !includeBacon && !includeEgg)
             {
                 Assert.Contains("Hold bun", tt.SpecialInstructions);
                 Assert.Contains("Hold ketchup", tt.SpecialInstructions);
                 Assert.Contains("Hold mustard", tt.SpecialInstructions);
                 Assert.Contains("Hold pickle", tt.SpecialInstructions);
                 Assert.Contains("Hold cheese", tt.SpecialInstructions);
-                Assert.Conatins("Hold lettuce", tt.SpecialInstrucations);
-                Assert.Conatins("Hold tomato", tt.SpecialInstructions);
-                Assert.Conatins("Hold mayo", tt.SpecialInstructions);
-                Assert.Conatins("Hold bacon", tt.SpecialInstructions);
-                Assert.Conatins("Hold egg", tt.SpecialInstructions);
+                Assert.Contains("Hold lettuce", tt.SpecialInstructions);
+                Assert.Contains("Hold tomato", tt.SpecialInstructions);
+                Assert.Contains("Hold mayo", tt.SpecialInstructions);
+                Assert.Contains("Hold bacon", tt.SpecialInstructions);
+                Assert.Contains("Hold egg", tt.SpecialInstructions);
             }
         }
 
         [Fact]
         public void ShouldReturnCorrectToString()
         {
-            ThalmorTripleTests tt = new ThalmorTripleTests();
+            ThalmorTriple tt = new ThalmorTriple();
             Assert.Equal("Thalmor Triple", tt.ToString());
         }
     }

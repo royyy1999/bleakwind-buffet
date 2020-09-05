@@ -64,10 +64,10 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         public void ShouldBeAbleToSetHashbrowns()
         {
             SmokehouseSkeleton ss = new SmokehouseSkeleton();
-            ss.Hashbrowns = false;
-            Assert.False(ss.Hashbrowns);
-            ss.Hashbrowns = true;
-            Assert.True(ss.Hashbrowns);
+            ss.HashBrowns = false;
+            Assert.False(ss.HashBrowns);
+            ss.HashBrowns = true;
+            Assert.True(ss.HashBrowns);
         }
 
         [Fact]
@@ -91,7 +91,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         public void ShouldReturnCorrectCalories()
         {
             SmokehouseSkeleton ss = new SmokehouseSkeleton();
-            Asser.Equal(602, ss.Calories);
+            Assert.Equal(602.0, ss.Calories);
         }
 
         [Theory]
@@ -111,12 +111,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
                 Assert.Empty(ss.SpecialInstructions);
             }
 
-            if (includeSausage && includeEgg && includeHashbrowns && includePancake)
+            if (!includeSausage && !includeEgg && !includeHashbrowns && !includePancake)
             {
-                Assert.Conatins("Hold sausage", ss.SpecialInstructions);
-                Assert.Conatins("Hold eggs", ss.SpecialInstructions);
-                Assert.Conatins("Hold hash browns", ss.SpecialInstructions);
-                Assert.Conatins("Hold pancakes", ss.SpecialInstructions);
+                Assert.Contains("Hold sausage", ss.SpecialInstructions);
+                Assert.Contains("Hold eggs", ss.SpecialInstructions);
+                Assert.Contains("Hold hash browns", ss.SpecialInstructions);
+                Assert.Contains("Hold pancakes", ss.SpecialInstructions);
             }
         }
 

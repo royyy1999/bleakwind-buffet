@@ -131,7 +131,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             }
             if(!includeIce && includeCream)
             {
-                Assert.Contains("Add cream");
+                Assert.Contains("Add cream", cc.SpecialInstructions);
             }
             if(!includeIce && !includeCream)
             {

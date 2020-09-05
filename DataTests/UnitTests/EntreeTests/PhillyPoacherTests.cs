@@ -5,7 +5,7 @@
  * Purpose: Test the PhillyPoacher.cs class in the Data library
  */
 using Xunit;
-using BleakwindBuffet.DataTests.Entrees;
+using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
@@ -74,7 +74,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         public void ShouldReturnCorrectCalories()
         {
             PhillyPoacher pp = new PhillyPoacher();
-            Assert.Equal(784, pp.Calories);
+            Assert.Equal(784.0, pp.Calories);
         }
 
         [Theory]
