@@ -47,22 +47,13 @@ namespace BleakwindBuffet.Data.Drinks
         {
             get
             {
-                if (size == Size.Small)
+                switch (size)
                 {
-                    return 1.05;
-                }
-                if (size == Size.Medium)
-                {
-                    return 1.11;
-                }
-                if (size == Size.Large)
-                {
-                    return 1.22;
-                }
-                else
-                {
-                    throw new NotImplementedException();
-                }
+                    case Size.Small: return 1.05;
+                    case Size.Medium: return 1.11;
+                    case Size.Large: return 1.22;
+                    default: throw new NotImplementedException($"Unknown size {Size}");
+                }             
             }
         }
 
@@ -76,22 +67,13 @@ namespace BleakwindBuffet.Data.Drinks
         {
             get
             {
-                if (size == Size.Small)
+                switch (size)
                 {
-                    return 56;
-                }
-                if (size == Size.Medium)
-                {
-                    return 72;
-                }
-                if (size == Size.Large)
-                {
-                    return 93;
-                }
-                else
-                {
-                    throw new NotImplementedException();
-                }
+                    case Size.Small: return 56;
+                    case Size.Medium: return 72;
+                    case Size.Large: return 93;
+                    default: throw new NotImplementedException($"Unknown size {Size}");
+                }               
             }
         }
 
