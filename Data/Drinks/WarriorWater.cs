@@ -48,7 +48,7 @@ namespace BleakwindBuffet.Data.Drinks
         public double Price
         {
             get
-            {           
+            {
                 return 0.00;
             }
         }
