@@ -118,10 +118,26 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             CandlehearthCoffee cc = new CandlehearthCoffee();
             cc.Ice = includeIce;
             cc.RoomForCream = includeCream;
-            if (includeIce) Assert.Contains("Add ice", cc.SpecialInstructions);
-            if (includeCream) Assert.Contains("Add cream", cc.SpecialInstructions);
-            else Assert.Empty(cc.SpecialInstructions);
+
+            if (includeIce && includeCream)
+            {
+                Assert.Contains("Add ice", cc.SpecialInstructions);
+                Assert.Contains("Add cream", cc.SpecialInstructions);
+            }
+            if (includeIce && !includeCream)
+            {
+                Assert.Contains("Add ice", cc.SpecialInstructions);
+            }
+            if(!includeIce && includeCream)
+            {
+                Assert.Contains("Add cream");
+            }
+            if(!includeIce && !includeCream)
+            {
+                Assert.Empty(cc.SpecialInstructions);
+            }
         }
+            
 
         [Theory]
         [InlineData(true, Size.Small, "Small Decaf Candlehearth Coffee")]
