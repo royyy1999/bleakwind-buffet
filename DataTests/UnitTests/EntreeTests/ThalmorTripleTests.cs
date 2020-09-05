@@ -1,5 +1,6 @@
 ﻿/*
  * Author: Zachery Brunner
+ * Edited by: Roy Fernandez
  * Class: ThalmorTripleTests.cs
  * Purpose: Test the ThalmorTriple.cs class in the Data library
  */
@@ -218,7 +219,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 
             if (includeBun && includeKetchup && includeMustard && includePickle && includeCheese && includeTomato && includeLettuce && includeMayo && includeBacon && includeEgg)
             {
-                Assert.Contatins(tt.SpecialInstructions);
+                Assert.Empty(tt.SpecialInstructions);
             }
 
             if (!includeBun && !includeKetchup && !includeMustard && !includePickle && !includeCheese && !includeTomato && !includeLettuce && !includeMayo && !includeBacon && !includeEg)

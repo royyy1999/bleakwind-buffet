@@ -1,5 +1,6 @@
 ﻿/*
  * Author: Zachery Brunner
+ * Edited by: Roy Fernandez
  * Class: DoubleDraugrTests.cs
  * Purpose: Test the DoubleDraugr.cs class in the Data library
  */
@@ -182,7 +183,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 
             if (includeBun && includeKetchup && includeMustard && includePickle && includeCheese && includeTomato && includeLettuce && includeMayo)
             {
-                Assert.Contatins(dd.SpecialInstructions);
+                Assert.Empty(dd.SpecialInstructions);
             }
 
             if (!includeBun && !includeKetchup && !includeMustard && !includePickle && !includeCheese && !includeTomato && !includeLettuce && !includeMayo)

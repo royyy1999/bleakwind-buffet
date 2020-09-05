@@ -1,5 +1,6 @@
 ﻿/*
  * Author: Zachery Brunner
+ * Edited by: Roy Fernandez
  * Class: BriarheartBurgerTests.cs
  * Purpose: Test the BriarheartBurger.cs class in the Data library
  */
@@ -125,7 +126,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             bb.Cheese = includeCheese;
             if(includeBun && includeKetchup && includeMustard && includePickle && includeCheese)
             {
-                Assert.Contatins(bb.SpecialInstructions);
+                Assert.Empty(bb.SpecialInstructions);
             }
 
             if (!includeBun && !includeKetchup && !includeMustard && !includePickle && !includeCheese)
