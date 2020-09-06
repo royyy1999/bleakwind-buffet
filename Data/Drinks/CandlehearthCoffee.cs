@@ -9,7 +9,7 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class CandlehearthCoffee
+    public class CandlehearthCoffee : Drink, IOrderItem
     {
         /// <summary>
         /// Boolean property for ice in drink
@@ -98,7 +98,7 @@ namespace BleakwindBuffet.Data.Drinks
             {
                 List<string> instructions = new List<string>();
                 if (Ice) instructions.Add("Add ice");
-                if (RoomForCream) instructions.Add("Add cream");
+                if (RoomForCream) instructions.Add("Leave room for cream");
                 return instructions;
             }
         }

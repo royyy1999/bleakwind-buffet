@@ -10,7 +10,7 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class AretinoAppleJuice
+    public class AretinoAppleJuice : Drink, IOrderItem
     {
         /// <summary>
         /// Boolean property of ice in drink

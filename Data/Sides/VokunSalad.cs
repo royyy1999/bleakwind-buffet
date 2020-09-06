@@ -10,7 +10,7 @@ using System.Text;
 namespace BleakwindBuffet.Data.Sides
 {
 
-    public class VokunSalad
+    public class VokunSalad : Side, IOrderItem
     {
         /// <summary>
         /// Backing variable for size of salad.

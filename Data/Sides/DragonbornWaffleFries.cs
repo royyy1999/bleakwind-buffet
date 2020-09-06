@@ -9,7 +9,7 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Sides
 {
-    public class DragonbornWaffleFries
+    public class DragonbornWaffleFries : Side, IOrderItem
     {
         /// <summary>
         /// Backing variable for the size of the side

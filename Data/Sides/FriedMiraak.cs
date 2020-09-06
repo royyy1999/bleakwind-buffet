@@ -9,7 +9,7 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Sides
 {
-    public class FriedMiraak
+    public class FriedMiraak : Side, IOrderItem
     {
         /// <summary>
         /// Backing variable for size of order.

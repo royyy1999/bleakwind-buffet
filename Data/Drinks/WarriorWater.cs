@@ -9,7 +9,7 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class WarriorWater
+    public class WarriorWater : Drink, IOrderItem
     {
         /// <summary>
         /// Boolean property for ice in drink.
