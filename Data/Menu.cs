@@ -1,8 +1,9 @@
 ﻿/* Author: Roy Fernandez
  * Class: Menu.cs
- * Purpose: 
+ * Purpose: This class represents the menu of all possible items
  */
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Entrees;
@@ -14,6 +15,10 @@ namespace BleakwindBuffet.Data
 {
     public static class Menu
     {
+        /// <summary>
+        /// Returns a List of all entrees offered
+        /// </summary>
+        /// <returns>A List of entrees</returns>
         public static IEnumerable<IOrderItem> Entrees()
         {
             List<IOrderItem> entree = new List<IOrderItem>();
@@ -42,6 +47,10 @@ namespace BleakwindBuffet.Data
             return entree;
         }
 
+        /// <summary>
+        /// Returns a List of sides offered
+        /// </summary>
+        /// <returns>A List of sides</returns>
         public static IEnumerable<IOrderItem> Sides()
         {
             List<IOrderItem> side = new List<IOrderItem>();
@@ -89,6 +98,10 @@ namespace BleakwindBuffet.Data
             return side;
         }
 
+        /// <summary>
+        /// Returns a List of all drinks offered
+        /// </summary>
+        /// <returns>A List of drinks</returns>
         public static IEnumerable<IOrderItem> Drinks()
         {
             List<IOrderItem> drink = new List<IOrderItem>();
@@ -122,30 +135,17 @@ namespace BleakwindBuffet.Data
             MarkarthMilk mmL = new MarkarthMilk();
             mmL.Size = Size.Large;
             drink.Add(mmL);
-
-
-            
+       
             foreach(string flavor in Enum.GetNames(typeof(SodaFlavor)))
             {
                 foreach (string size in Enum.GetNames(typeof(Size)))
                 {
                     SailorSoda ss = new SailorSoda();
-                    ss.Flavor = flavor;
-                    ss.Size = size;
+                    ss.Flavor = (SodaFlavor)Enum.Parse(typeof(SodaFlavor), flavor);
+                    ss.Size = (Size)Enum.Parse(typeof(Size), size);
                     drink.Add(ss);
                 }
             }
-
-
-            SailorSoda ssS = new SailorSoda();
-            ssS.Size = Size.Small;
-            drink.Add(ssS);
-            SailorSoda ssM = new SailorSoda();
-            ssM.Size = Size.Medium;
-            drink.Add(ssM);
-            SailorSoda ssL = new SailorSoda();
-            ssL.Size = Size.Large;
-            drink.Add(ssL);
 
             WarriorWater wwS = new WarriorWater();
             wwS.Size = Size.Small;
@@ -160,9 +160,28 @@ namespace BleakwindBuffet.Data
             return drink;
         }
 
+        /// <summary>
+        /// Returns a List of the full menu of the restraunt
+        /// </summary>
+        /// <returns>A List of the full menu</returns>
         public static IEnumerable<IOrderItem> FullMenu()
         {
+            List<IOrderItem> wholeMenu = new List<IOrderItem>();
 
+            List<IOrderItem> entree = new List<IOrderItem>();
+            entree = (List<IOrderItem>)Entrees();
+
+            List<IOrderItem> side = new List<IOrderItem>();
+            side = (List<IOrderItem>)Sides();
+
+            List <IOrderItem> drink = new List<IOrderItem>();
+            drink = (List<IOrderItem>)Drinks();
+
+            wholeMenu.Concat(entree).ToList();
+            wholeMenu.Concat(side).ToList();
+            wholeMenu.Concat(drink).ToList();
+
+            return wholeMenu;
         }
     }
 }
