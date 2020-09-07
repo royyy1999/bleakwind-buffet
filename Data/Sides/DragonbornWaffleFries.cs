@@ -12,32 +12,12 @@ namespace BleakwindBuffet.Data.Sides
     public class DragonbornWaffleFries : Side, IOrderItem
     {
         /// <summary>
-        /// Backing variable for the size of the side
-        /// </summary>
-        private Size size = Size.Small;
-
-        /// <summary>
-        /// Gets and sets the size of the side ordered.
-        /// </summary>
-        public Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-            }
-        }
-
-        /// <summary>
         /// Assigns the price of the size ordered.
         /// </summary>
         /// <exception cref="System.NotImplementedException">
         /// Thrown if the price for the size is not known
         /// </exception>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -57,7 +37,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <exception cref="System.NotImplementedException">
         /// Thrown if the calories for the size is not known
         /// </exception>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -74,7 +54,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Returns a List of special instructions of order.
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

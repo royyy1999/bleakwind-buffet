@@ -22,30 +22,9 @@ namespace BleakwindBuffet.Data.Drinks
         public bool Lemon { get; set; } = false;
 
         /// <summary>
-        /// Backing variable for size of water
-        /// </summary>
-        private Size size = Size.Small;
-
-        /// <summary>
-        /// Gets and sets size of water ordered.
-        /// </summary>
-        public Size Size
-        {
-            get
-            {
-                return size;
-            }
-
-            set
-            {
-                size = value;
-            }
-        }
-
-        /// <summary>
         /// Assigns price of water
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -56,7 +35,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gives calorie information of the water ordered.
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -67,7 +46,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Returns a List of special instructions of water.
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

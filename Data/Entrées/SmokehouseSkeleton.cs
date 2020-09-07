@@ -13,12 +13,12 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets the price of the burger
         /// </summary>
-        public double Price => 5.62;
+        public override double Price => 5.62;
 
         /// <summary>
         /// Gets the calories of the burger
         /// </summary>
-        public uint Calories => 602;
+        public override uint Calories => 602;
 
         /// <summary>
         /// Boolean property for sausage on order
@@ -44,7 +44,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Returns a List of special instructions of order
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

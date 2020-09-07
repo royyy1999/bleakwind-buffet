@@ -17,33 +17,12 @@ namespace BleakwindBuffet.Data.Drinks
         public bool Ice { get; set; } = false;
 
         /// <summary>
-        /// Backing variable for size of drink
-        /// </summary>
-        private Size size = Size.Small;
-
-        /// <summary>
-        /// Gets and sets size of drink ordered
-        /// </summary>
-        public Size Size
-        {
-            get
-            {
-                return size;
-            }
-
-            set
-            {
-                size = value;
-            }
-        }
-
-        /// <summary>
         /// Assigns price to size of drink
         /// </summary>
         /// <exception cref="System.NotImplementedException">
         /// Thrown if the price for the size is not known
         /// </exception>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -64,7 +43,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <exception cref="System.NotImplementedException">
         /// Thrown if the calories for the size is not known
         /// </exception>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -92,7 +71,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Returns a List of special instructions of coffee
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

@@ -12,32 +12,12 @@ namespace BleakwindBuffet.Data.Sides
     public class FriedMiraak : Side, IOrderItem
     {
         /// <summary>
-        /// Backing variable for size of order.
-        /// </summary>
-        private Size size = Size.Small;
-
-        /// <summary>
-        /// Gets and sets size of the side.
-        /// </summary>
-        public Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-            }
-        }
-
-        /// <summary>
         /// Assigns the price to the size of the side ordered.
         /// </summary>
         /// <exception cref="System.NotImplementedException">
         /// Thrown if the price for the size is not known
         /// </exception>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -57,7 +37,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <exception cref="System.NotImplementedException">
         /// Thrown if the calories for the size is not known
         /// </exception>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -74,7 +54,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Returns a List of special instructions of the side
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
