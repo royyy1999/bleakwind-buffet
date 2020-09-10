@@ -29,6 +29,37 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.IsAssignableFrom<IOrderItem>(ss);
         }
 
+        [Theory]
+        [InlineData(SodaFlavor.Cherry, Size.Small)]
+        [InlineData(SodaFlavor.Cherry, Size.Medium)]
+        [InlineData(SodaFlavor.Cherry, Size.Large)]
+
+        [InlineData(SodaFlavor.Blackberry, Size.Small)]
+        [InlineData(SodaFlavor.Blackberry, Size.Medium)]
+        [InlineData(SodaFlavor.Blackberry, Size.Large)]
+
+        [InlineData(SodaFlavor.Grapefruit, Size.Small)]
+        [InlineData(SodaFlavor.Grapefruit, Size.Medium)]
+        [InlineData(SodaFlavor.Grapefruit, Size.Large)]
+
+        [InlineData(SodaFlavor.Lemon, Size.Small)]
+        [InlineData(SodaFlavor.Lemon, Size.Medium)]
+        [InlineData(SodaFlavor.Lemon, Size.Large)]
+
+        [InlineData(SodaFlavor.Peach, Size.Small)]
+        [InlineData(SodaFlavor.Peach, Size.Medium)]
+        [InlineData(SodaFlavor.Peach, Size.Large)]
+
+        [InlineData(SodaFlavor.Watermelon, Size.Small)]
+        [InlineData(SodaFlavor.Watermelon, Size.Medium)]
+        [InlineData(SodaFlavor.Watermelon, Size.Large)]
+        public void ReturnCorrectSodaOrder(SodaFlavor flavor, Size size)
+        {
+            SailorSoda ss = new SailorSoda();
+            ss.Flavor = flavor;
+            ss.Size = size;
+            Assert.Collection<Menu>(ss);
+        }
         [Fact]
         public void ShouldIncludeIceByDefault()
         {
