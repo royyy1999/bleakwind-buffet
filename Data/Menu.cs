@@ -167,19 +167,9 @@ namespace BleakwindBuffet.Data
         public static IEnumerable<IOrderItem> FullMenu()
         {
             List<IOrderItem> wholeMenu = new List<IOrderItem>();
-
-            List<IOrderItem> entree = new List<IOrderItem>();
-            entree = (List<IOrderItem>)Entrees();
-
-            List<IOrderItem> side = new List<IOrderItem>();
-            side = (List<IOrderItem>)Sides();
-
-            List <IOrderItem> drink = new List<IOrderItem>();
-            drink = (List<IOrderItem>)Drinks();
-
-            wholeMenu.Concat(entree).ToList();
-            wholeMenu.Concat(side).ToList();
-            wholeMenu.Concat(drink).ToList();
+            wholeMenu.AddRange(Entrees());
+            wholeMenu.AddRange(Sides());
+            wholeMenu.AddRange(Drinks());
 
             return wholeMenu;
         }

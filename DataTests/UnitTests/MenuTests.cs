@@ -165,10 +165,13 @@ namespace BleakwindBuffet.DataTests.UnitTests
         [Fact]
         public void ShouldHaveCorrectListOfFullMenu()
         {
+            int expLength = 49;
+            IEnumerable<IOrderItem> menu = Menu.FullMenu();
+            List<IOrderItem> list = (List<IOrderItem>)menu;
 
-            int numberOfItemsInSizeEnum = Enum.GetValues(typeof(Size)).Length;
-
+            Assert.Equal(expLength, list.Count);
         }
+        
         
     }
 }
