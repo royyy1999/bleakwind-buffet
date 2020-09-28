@@ -34,19 +34,15 @@ namespace PointOfSale
         }
 
         /// <summary>
-        /// The event handler for the item selected
-        /// </summary>
-        public event EventHandler<EventHandlerSelector> itemSelected;
-
-        /// <summary>
         /// Event handler for the Briarheart Burger button
         /// </summary>
         /// <param name="sender">What triggered this event</param>
         /// <param name="e">The parameters of this event</param>
         void BriarheartBurger_Click(object sender, RoutedEventArgs e)
         {
-            BriarheartBurger itemFood = new BriarheartBurger();
-            itemSelected?.Invoke(this, new EventHandlerSelector() { item = itemFood });
+            var controlOrder = this.FindAncestor<MainWindow>();
+            BriarheartBurgerPOS bb = new BriarheartBurgerPOS();
+            controlOrder.ScreenSwap(bb);
         }
 
         /// <summary>

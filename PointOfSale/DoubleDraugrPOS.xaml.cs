@@ -1,12 +1,6 @@
-﻿/* Author: Roy Fernandez
- * Class: MainWindow.xaml.cs
- * Purpose: Serves as the topmost control for the project
- */
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -20,18 +14,13 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for DoubleDraugrPOS.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class DoubleDraugrPOS : UserControl
     {
-        public MainWindow()
+        public DoubleDraugrPOS()
         {
             InitializeComponent();
-        }
-
-        public void ScreenSwap(UIElement e)
-        {
-            menuBorder.Child = e;
         }
     }
 }

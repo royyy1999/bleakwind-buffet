@@ -8,14 +8,25 @@
         Title="Bleakwind Buffet Point of Sale" Height="450" Width="750"
         Background="Black">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+
         <TextBlock FontWeight="Black" Background="Black" Foreground="Red" FontSize="40" Margin="99,4,291,380" Grid.ColumnSpan="2">
             Bleakwind Buffet
         </TextBlock>
+
         <TextBlock Foreground="White" TextAlignment="Center" Margin="-107,64,107,-19">
             Add to Order
         </TextBlock>
-        <local:Order Margin="539,56,21,19"/>
-        <local:MenuSelection Margin="8,78,224,22"/>
-        <local:ItemCustomization Margin="18,458,238,-381"/>
+        <Border Name="orderorder">
+            <local:Order Margin="554,19,-193,15"/>
+        </Border>
+
+        <Border x:Name="menuBorder">
+            <local:MenuSelection Margin="8,78,0,22" HorizontalAlignment="Left" Width="539"/>
+        </Border>
+
     </Grid>
 </Window>

@@ -134,6 +134,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+       
         <Button Style="{DynamicResource ItemButton}" Background="Red" Foreground="White" FontFamily="Arial" Margin="5.5"  Grid.Row="1" Grid.Column="0" Click="BriarheartBurger_Click">
             Briarheart Burger
         </Button>
