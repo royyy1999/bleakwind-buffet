@@ -1,0 +1,21 @@
+﻿<Window x:Class="PointOfSale.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PointOfSale"
+        mc:Ignorable="d"
+        Title="Bleakwind Buffet Point of Sale" Height="450" Width="750"
+        Background="Black">
+    <Grid>
+        <TextBlock FontWeight="Black" Background="Black" Foreground="Red" FontSize="40" Margin="99,4,291,380" Grid.ColumnSpan="2">
+            Bleakwind Buffet
+        </TextBlock>
+        <TextBlock Foreground="White" TextAlignment="Center" Margin="-107,64,107,-19">
+            Add to Order
+        </TextBlock>
+        <local:Order Margin="539,56,21,19"/>
+        <local:MenuSelection Margin="8,78,224,22"/>
+        <local:ItemCustomization Margin="18,458,238,-381"/>
+    </Grid>
+</Window>
