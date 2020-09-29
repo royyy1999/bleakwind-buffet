@@ -13,19 +13,17 @@
             <ColumnDefinition Width="1.5*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock FontWeight="Black" Background="Black" Foreground="Red" FontSize="40" Margin="99,4,291,380" Grid.ColumnSpan="2">
+        <TextBlock FontWeight="Black" Background="Black" Foreground="Red" FontSize="40" Margin="99,4,86,336">
             Bleakwind Buffet
         </TextBlock>
 
-        <TextBlock Foreground="White" TextAlignment="Center" Margin="-107,64,107,-19">
-            Add to Order
-        </TextBlock>
+        
         <Border Name="orderorder">
             <local:Order Margin="554,19,-193,15"/>
         </Border>
 
         <Border x:Name="menuBorder">
-            <local:MenuSelection Margin="8,78,0,22" HorizontalAlignment="Left" Width="539"/>
+            <local:MenuSelection Margin="8,78,0,22" HorizontalAlignment="Left" Width="539" Loaded="MenuSelection_Loaded"/>
         </Border>
 
     </Grid>

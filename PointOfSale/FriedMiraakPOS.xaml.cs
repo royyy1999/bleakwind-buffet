@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Author: Roy Fernandez
+ * Class: FriedMiraakPOS.xaml.cs
+ * Purpose: A class for the Fried Miraak item
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,9 +22,24 @@ namespace PointOfSale
     /// </summary>
     public partial class FriedMiraakPOS : UserControl
     {
+        /// <summary>
+        /// Iniitializes the item
+        /// </summary>
         public FriedMiraakPOS()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// Event handler for the Done button
+        /// </summary>
+        /// <param name="sender">What triggered this event</param>
+        /// <param name="e">The parameters of this event</param>
+        private void doneButton_Click(object sender, RoutedEventArgs e)
+        {
+            var controlOrder = this.FindAncestor<MainWindow>();
+            MenuSelection m = new MenuSelection();
+            controlOrder.ScreenSwap(m);
         }
     }
 }

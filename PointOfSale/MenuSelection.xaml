@@ -125,7 +125,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="35"/>
+            <RowDefinition Height="45"/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -156,7 +156,7 @@
         <Button Style="{DynamicResource ButtonStyle2}" Background="Red" Foreground="White" FontFamily="Arial" FontSize="12" Margin="5.5" Grid.Row="7" Grid.Column="0" Click="ThugsTBone_Click">
             Thugs T-Bone
         </Button>
-        <Button Style="{DynamicResource ButtonStyle2}" Background="Red" Foreground="White" FontFamily="Arial" FontSize="12" Margin="5.5" Grid.Row="1" Grid.Column="1" Click="VokunSalad_Click">
+        <Button Style="{DynamicResource ButtonStyle2}" Background="Red" Foreground="White" FontFamily="Arial" FontSize="12" Margin="5.5" Grid.Row="1" Grid.Column="1" Click="SailorSoda_Click">
             Sailor's Soda
         </Button>
         <Button Style="{DynamicResource ButtonStyle2}" Background="Red" Foreground="White" FontFamily="Arial" FontSize="12" Margin="5.5" Grid.Row="2" Grid.Column="1" Click="MarkarthMilk_Click">
@@ -175,14 +175,17 @@
         <Button Style="{DynamicResource ButtonStyle2}" Background="Red" Foreground="White" FontFamily="Arial" FontSize="12" Margin="2,6,10,6" Grid.Row="2" Grid.Column="2" Content="Fried Miraak" Click="FriedMiraak_Click"/>
         <Button Style="{DynamicResource ButtonStyle2}" Background="Red" Foreground="White" FontFamily="Arial" FontSize="12" Margin="2,6,10,6" Grid.Row="3" Grid.Column="2" Content="Mad Otar Grits" Click="MadOtarGrits_Click"/>
         <Button Style="{DynamicResource ButtonStyle2}" Background="Red" Foreground="White" FontFamily="Arial" FontSize="12" Margin="2,6,10,6" Grid.Row="4" Grid.Column="2" Content="Dragonborn Waffle Fries " Click="DragonbornWaffleFries_Click"/>
-        
-        <TextBlock FontWeight="ExtraBold" Foreground="White"  TextAlignment="Center" Margin="0,11,0,34" Grid.RowSpan="2">
+
+        <TextBlock Foreground="White" TextAlignment="Center" Grid.Column="1" Margin="0,-2,0,2">
+            Add to Order
+        </TextBlock>
+        <TextBlock FontWeight="ExtraBold" Foreground="White"  TextAlignment="Center" Margin="0,20,0,25" Grid.RowSpan="2">
             Entree
         </TextBlock>
-        <TextBlock FontWeight="ExtraBold" Foreground="White" Grid.Row="0" Grid.Column="1" TextAlignment="Center" Margin="0,11,0,34" Grid.RowSpan="2">
+        <TextBlock FontWeight="ExtraBold" Foreground="White" Grid.Row="0" Grid.Column="1" TextAlignment="Center" Margin="0,23,0,21" Grid.RowSpan="2">
             Drinks
         </TextBlock>
-        <TextBlock FontWeight="ExtraBold" Foreground="White" Grid.Row="0" Grid.Column="2" TextAlignment="Center" Margin="0,11,0,34" Grid.RowSpan="2">
+        <TextBlock FontWeight="ExtraBold" Foreground="White" Grid.Row="0" Grid.Column="2" TextAlignment="Center" Margin="0,20,0,25" Grid.RowSpan="2">
             Drinks
         </TextBlock>
     </Grid>

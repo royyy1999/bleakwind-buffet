@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Author: Roy Fernandez
+ * Class: Order.xaml.cs
+ * Purpose: A class for the Order list
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,6 +22,9 @@ namespace PointOfSale
     /// </summary>
     public partial class Order : UserControl
     {
+        /// <summary>
+        /// Initializes order
+        /// </summary>
         public Order()
         {
             InitializeComponent();

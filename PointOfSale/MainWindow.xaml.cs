@@ -29,9 +29,15 @@ namespace PointOfSale
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Event handler for the Done button
+        /// </summary>
+        /// <param name="sender">What triggered this event</param>
+        /// <param name="e">The parameters of this event</param>
         public void ScreenSwap(UIElement e)
         {
             menuBorder.Child = e;
         }
+
     }
 }

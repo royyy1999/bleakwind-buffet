@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Author: Roy Fernandez
+ * Class: ThugsTBonePOS.xaml.cs
+ * Purpose: A class for the Thugs T-Bone item
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,6 +22,9 @@ namespace PointOfSale
     /// </summary>
     public partial class ThugsTBonePOS : UserControl
     {
+        /// <summary>
+        /// initializes the item
+        /// </summary>
         public ThugsTBonePOS()
         {
             InitializeComponent();

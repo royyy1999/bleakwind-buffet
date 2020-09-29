@@ -65,6 +65,7 @@
     </UserControl.Resources>
     <Grid>
         <ListBox Background="Red">
+            <TextBlock FontWeight="ExtraBold" FontSize="23">Special Instructions</TextBlock>
             <CheckBox IsChecked="True" Foreground="White" FontWeight="ExtraBold">Bun</CheckBox>
             <CheckBox IsChecked="True" Foreground="White" FontWeight="ExtraBold">Ketchup</CheckBox>
             <CheckBox IsChecked="True" Foreground="White" FontWeight="ExtraBold">Mustard</CheckBox>
@@ -74,9 +75,10 @@
             <CheckBox IsChecked="True" Foreground="White" FontWeight="ExtraBold">Tomato</CheckBox>
             <CheckBox IsChecked="True" Foreground="White" FontWeight="ExtraBold">Lettuce</CheckBox>
             <CheckBox IsChecked="True" Foreground="White" FontWeight="ExtraBold">Mayo</CheckBox>
+            <Button FontSize="24" Background="Black" Foreground="Red" FontWeight="ExtraBold" Name="doneButton" Click="doneButton_Click">
+                Done
+            </Button>
         </ListBox>
-        <Button Style="{DynamicResource ButtonStyle1}" FontSize="25" Background="Black" Foreground="Red" FontWeight="ExtraBold" Name="doneButton"  Margin="334,339,334,54" Click="doneButton_Click">
-            Done
-        </Button>
+      
     </Grid>
 </UserControl>

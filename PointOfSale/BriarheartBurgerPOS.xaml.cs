@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Author: Roy Fernandez
+ * Class: BriarheartBurgerPOS.xaml.cs
+ * Purpose: A class for the Briarheart Burger item
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -23,6 +27,11 @@ namespace PointOfSale
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Event handler for the Done button
+        /// </summary>
+        /// <param name="sender">What triggered this event</param>
+        /// <param name="e">The parameters of this event</param>
         private void doneButton_Click(object sender, RoutedEventArgs e)
         {
             var controlOrder = this.FindAncestor<MainWindow>();

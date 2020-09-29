@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Author: Roy Fernandez
+ * Class: SailorSodaPOS.xaml.cs
+ * Purpose: A class for the Sailor Soda item
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,14 +22,24 @@ namespace PointOfSale
     /// </summary>
     public partial class SailorSodaPOS : UserControl
     {
+        /// <summary>
+        /// Initializes the item
+        /// </summary>
         public SailorSodaPOS()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Event handler for the Done button
+        /// </summary>
+        /// <param name="sender">What triggered this event</param>
+        /// <param name="e">The parameters of this event</param>
         private void doneButton_Click(object sender, RoutedEventArgs e)
         {
-
+            var controlOrder = this.FindAncestor<MainWindow>();
+            MenuSelection m = new MenuSelection();
+            controlOrder.ScreenSwap(m);
         }
     }
 }

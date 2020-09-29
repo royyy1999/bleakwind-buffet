@@ -46,9 +46,9 @@
             <RadioButton GroupName="Flavor" Foreground="White" FontWeight="ExtraBold">Watermelon</RadioButton>
             <TextBlock FontWeight="ExtraBold" FontSize="23">Special Instructions</TextBlock>
             <CheckBox IsChecked="True" Foreground="White" FontWeight="ExtraBold">Ice</CheckBox>
+            <Button FontSize="24" Background="Black" Foreground="rED" FontWeight="ExtraBold" Name="doneButton"  Click="doneButton_Click">
+                Done
+            </Button>
         </ListBox>
-        <Button Template="{DynamicResource ButtonTemplate1}" FontSize="25" Background="Black" Foreground="Red" FontWeight="ExtraBold" Name="doneButton"  Margin="126,307,542,86" Click="doneButton_Click">
-            Done
-        </Button>
     </Grid>
 </UserControl>

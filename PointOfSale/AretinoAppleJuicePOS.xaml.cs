@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Author: Roy Fernandez
+ * Class: AretinoAppleJuicePOS.xaml.cs
+ * Purpose: A class for the Aretino Apple Juice item
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,9 +22,24 @@ namespace PointOfSale
     /// </summary>
     public partial class AretinoAppleJuicePOS : UserControl
     {
+        /// <summary>
+        /// Initializes the item
+        /// </summary>
         public AretinoAppleJuicePOS()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// Event handler for the Done button
+        /// </summary>
+        /// <param name="sender">What triggered this event</param>
+        /// <param name="e">The parameters of this event</param>
+        private void doneButton_Click(object sender, RoutedEventArgs e)
+        {
+            var controlOrder = this.FindAncestor<MainWindow>();
+            MenuSelection m = new MenuSelection();
+            controlOrder.ScreenSwap(m);
         }
     }
 }

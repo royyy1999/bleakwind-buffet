@@ -7,6 +7,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <ListBox Background="Red">
+            <TextBlock FontWeight="ExtraBold" FontSize="23">Size</TextBlock>
+            <RadioButton GroupName="Size" IsChecked="True" Foreground="White" FontWeight="ExtraBold">Small</RadioButton>
+            <RadioButton GroupName="Size" Foreground="White" FontWeight="ExtraBold">Medium</RadioButton>
+            <RadioButton GroupName="Size" Foreground="White" FontWeight="ExtraBold">Large</RadioButton>
+            <Button FontSize="24" Background="Black" Foreground="rED" FontWeight="ExtraBold" Name="doneButton" Click="doneButton_Click">
+                Done
+            </Button>
+        </ListBox>
     </Grid>
 </UserControl>
