@@ -14,20 +14,18 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for DoubleDraugrPOS.xaml
+    /// Interaction logic for SailorSodaPOS.xaml
     /// </summary>
-    public partial class DoubleDraugrPOS : UserControl
+    public partial class SailorSodaPOS : UserControl
     {
-        public DoubleDraugrPOS()
+        public SailorSodaPOS()
         {
             InitializeComponent();
         }
 
         private void doneButton_Click(object sender, RoutedEventArgs e)
         {
-            var controlOrder = this.FindAncestor<MainWindow>();
-            MenuSelection m = new MenuSelection();
-            controlOrder.ScreenSwap(m);
+
         }
     }
 }

@@ -14,20 +14,18 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for DoubleDraugrPOS.xaml
+    /// Interaction logic for GardenOrcOmelettePOS.xaml
     /// </summary>
-    public partial class DoubleDraugrPOS : UserControl
+    public partial class GardenOrcOmelettePOS : UserControl
     {
-        public DoubleDraugrPOS()
+        public GardenOrcOmelettePOS()
         {
             InitializeComponent();
         }
 
         private void doneButton_Click(object sender, RoutedEventArgs e)
         {
-            var controlOrder = this.FindAncestor<MainWindow>();
-            MenuSelection m = new MenuSelection();
-            controlOrder.ScreenSwap(m);
+
         }
     }
 }

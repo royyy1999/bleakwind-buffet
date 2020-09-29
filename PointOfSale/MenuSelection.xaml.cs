@@ -52,8 +52,9 @@ namespace PointOfSale
         /// <param name="e">The parameters of this event</param>
         void DoubleDraugr_Click(object sender, RoutedEventArgs e)
         {
-            DoubleDraugr itemFood = new DoubleDraugr();
-            itemSelected?.Invoke(this, new EventHandlerSelector() { item = itemFood });
+            var controlOrder = this.FindAncestor<MainWindow>();
+            DoubleDraugrPOS bb = new DoubleDraugrPOS();
+            controlOrder.ScreenSwap(bb);
         }
 
         /// <summary>
@@ -63,8 +64,9 @@ namespace PointOfSale
         /// <param name="e">The parameters of this event</param>
          void ThalmorTriple_Click(object sender, RoutedEventArgs e)
         {
-            ThalmorTriple itemFood = new ThalmorTriple();
-            itemSelected?.Invoke(this, new EventHandlerSelector() { item = itemFood });
+            var controlOrder = this.FindAncestor<MainWindow>();
+            ThalmorTriplePOS bb = new ThalmorTriplePOS();
+            controlOrder.ScreenSwap(bb);
         }
 
         /// <summary>
@@ -74,8 +76,9 @@ namespace PointOfSale
         /// <param name="e">The parameters of this event</param>
         private void SmokehouseSkeleton_Click(object sender, RoutedEventArgs e)
         {
-            SmokehouseSkeleton itemFood = new SmokehouseSkeleton();
-            itemSelected?.Invoke(this, new EventHandlerSelector() { item = itemFood });
+            var controlOrder = this.FindAncestor<MainWindow>();
+            SmokehouseSkeletonPOS bb = new SmokehouseSkeletonPOS();
+            controlOrder.ScreenSwap(bb);
         }
 
         /// <summary>
@@ -85,8 +88,9 @@ namespace PointOfSale
         /// <param name="e">The parameters of this event</param>
         private void GardenOrcOmelette_Click(object sender, RoutedEventArgs e)
         {
-            GardenOrcOmelette itemFood = new GardenOrcOmelette();
-            itemSelected?.Invoke(this, new EventHandlerSelector() { item = itemFood });
+            var controlOrder = this.FindAncestor<MainWindow>();
+            GardenOrcOmelettePOS bb = new GardenOrcOmelettePOS();
+            controlOrder.ScreenSwap(bb);
         }
 
         /// <summary>
@@ -96,8 +100,9 @@ namespace PointOfSale
         /// <param name="e">The parameters of this event</param>
         private void PhillyPoacher_Click(object sender, RoutedEventArgs e)
         {
-            PhillyPoacher itemFood = new PhillyPoacher();
-            itemSelected?.Invoke(this, new EventHandlerSelector() { item = itemFood });
+            var controlOrder = this.FindAncestor<MainWindow>();
+            PhillyPoacherPOS bb = new PhillyPoacherPOS();
+            controlOrder.ScreenSwap(bb);
         }
 
         /// <summary>
@@ -107,8 +112,9 @@ namespace PointOfSale
         /// <param name="e">The parameters of this event</param>
         private void ThugsTBone_Click(object sender, RoutedEventArgs e)
         {
-            ThugsTBone itemFood = new ThugsTBone();
-            itemSelected?.Invoke(this, new EventHandlerSelector() { item = itemFood });
+            var controlOrder = this.FindAncestor<MainWindow>();
+            ThugsTBonePOS bb = new ThugsTBonePOS();
+            controlOrder.ScreenSwap(bb);
         }
 
         /// <summary>
@@ -118,8 +124,9 @@ namespace PointOfSale
         /// <param name="e">The parameters of this event</param>
         private void SailorSoda_Click(object sender, RoutedEventArgs e)
         {
-            SailorSoda itemFood = new SailorSoda();
-            itemSelected?.Invoke(this, new EventHandlerSelector() { item = itemFood });
+            var controlOrder = this.FindAncestor<MainWindow>();
+            SailorSodaPOS bb = new SailorSodaPOS();
+            controlOrder.ScreenSwap(bb);
         }
 
         /// <summary>
@@ -129,8 +136,9 @@ namespace PointOfSale
         /// <param name="e">The parameters of this event</param>
         private void MarkarthMilk_Click(object sender, RoutedEventArgs e)
         {
-            MarkarthMilk itemFood = new MarkarthMilk();
-            itemSelected?.Invoke(this, new EventHandlerSelector() { item = itemFood });
+            var controlOrder = this.FindAncestor<MainWindow>();
+            MarkarthMilkPOS bb = new MarkarthMilkPOS();
+            controlOrder.ScreenSwap(bb);
         }
 
         /// <summary>
@@ -140,8 +148,9 @@ namespace PointOfSale
         /// <param name="e">The parameters of this event</param>
         private void AretinoAppleJuice_Click(object sender, RoutedEventArgs e)
         {
-            AretinoAppleJuice itemFood = new AretinoAppleJuice();
-            itemSelected?.Invoke(this, new EventHandlerSelector() { item = itemFood });
+            var controlOrder = this.FindAncestor<MainWindow>();
+            AretinoAppleJuicePOS bb = new AretinoAppleJuicePOS();
+            controlOrder.ScreenSwap(bb);
         }
 
         /// <summary>
@@ -151,8 +160,9 @@ namespace PointOfSale
         /// <param name="e">The parameters of this event</param>
         private void CandlehearthCoffee_Click(object sender, RoutedEventArgs e)
         {
-            CandlehearthCoffee itemFood = new CandlehearthCoffee();
-            itemSelected?.Invoke(this, new EventHandlerSelector() { item = itemFood });
+            var controlOrder = this.FindAncestor<MainWindow>();
+            CandlehearthCoffeePOS bb = new CandlehearthCoffeePOS();
+            controlOrder.ScreenSwap(bb);
         }
 
         /// <summary>
@@ -162,8 +172,9 @@ namespace PointOfSale
         /// <param name="e">The parameters of this event</param>
         private void WarriorWater_Click(object sender, RoutedEventArgs e)
         {
-            WarriorWater itemFood = new WarriorWater();
-            itemSelected?.Invoke(this, new EventHandlerSelector() { item = itemFood });
+            var controlOrder = this.FindAncestor<MainWindow>();
+            WarriorWaterPOS bb = new WarriorWaterPOS();
+            controlOrder.ScreenSwap(bb);
         }
 
         /// <summary>
@@ -173,8 +184,9 @@ namespace PointOfSale
         /// <param name="e">The parameters of this event</param>
         private void VokunSalad_Click(object sender, RoutedEventArgs e)
         {
-            VokunSalad itemFood = new VokunSalad();
-            itemSelected?.Invoke(this, new EventHandlerSelector() { item = itemFood });
+            var controlOrder = this.FindAncestor<MainWindow>();
+            VokunSaladPOS bb = new VokunSaladPOS();
+            controlOrder.ScreenSwap(bb);
         }
 
         /// <summary>
@@ -184,8 +196,9 @@ namespace PointOfSale
         /// <param name="e">The parameters of this event</param>
         private void FriedMiraak_Click(object sender, RoutedEventArgs e)
         {
-            FriedMiraak itemFood = new FriedMiraak();
-            itemSelected?.Invoke(this, new EventHandlerSelector() { item = itemFood });
+            var controlOrder = this.FindAncestor<MainWindow>();
+            FriedMiraakPOS bb = new FriedMiraakPOS();
+            controlOrder.ScreenSwap(bb);
         }
 
         /// <summary>
@@ -195,8 +208,9 @@ namespace PointOfSale
         /// <param name="e">The parameters of this event</param>
         private void MadOtarGrits_Click(object sender, RoutedEventArgs e)
         {
-            MadOtarGrits itemFood = new MadOtarGrits();
-            itemSelected?.Invoke(this, new EventHandlerSelector() { item = itemFood });
+            var controlOrder = this.FindAncestor<MainWindow>();
+            MadOtarGritsPOS bb = new MadOtarGritsPOS();
+            controlOrder.ScreenSwap(bb);
         }
 
         /// <summary>
@@ -206,8 +220,9 @@ namespace PointOfSale
         /// <param name="e">The parameters of this event</param>
         private void DragonbornWaffleFries_Click(object sender, RoutedEventArgs e)
         {
-            DragonbornWaffleFries itemFood = new DragonbornWaffleFries();
-            itemSelected?.Invoke(this, new EventHandlerSelector() { item = itemFood });
+            var controlOrder = this.FindAncestor<MainWindow>();
+            DragonbornWaffleFriesPOS bb = new DragonbornWaffleFriesPOS();
+            controlOrder.ScreenSwap(bb);
         }
     }
 }

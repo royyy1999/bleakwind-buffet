@@ -14,20 +14,13 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for DoubleDraugrPOS.xaml
+    /// Interaction logic for MarkarthMilkPOS.xaml
     /// </summary>
-    public partial class DoubleDraugrPOS : UserControl
+    public partial class MarkarthMilkPOS : UserControl
     {
-        public DoubleDraugrPOS()
+        public MarkarthMilkPOS()
         {
             InitializeComponent();
-        }
-
-        private void doneButton_Click(object sender, RoutedEventArgs e)
-        {
-            var controlOrder = this.FindAncestor<MainWindow>();
-            MenuSelection m = new MenuSelection();
-            controlOrder.ScreenSwap(m);
         }
     }
 }

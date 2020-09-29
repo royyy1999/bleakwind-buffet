@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="PointOfSale.DoubleDraugrPOS"
+﻿<UserControl x:Class="PointOfSale.ThalmorTriplePOS"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -25,7 +25,7 @@
         <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
         <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
         <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
-        <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+        <Style TargetType="{x:Type Button}">
             <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
             <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
             <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
@@ -74,8 +74,10 @@
             <CheckBox IsChecked="True" Foreground="White" FontWeight="ExtraBold">Tomato</CheckBox>
             <CheckBox IsChecked="True" Foreground="White" FontWeight="ExtraBold">Lettuce</CheckBox>
             <CheckBox IsChecked="True" Foreground="White" FontWeight="ExtraBold">Mayo</CheckBox>
+            <CheckBox IsChecked="True" Foreground="White" FontWeight="ExtraBold">Bacon</CheckBox>
+            <CheckBox IsChecked="True" Foreground="White" FontWeight="ExtraBold">Egg</CheckBox>
         </ListBox>
-        <Button Style="{DynamicResource ButtonStyle1}" FontSize="25" Background="Black" Foreground="Red" FontWeight="ExtraBold" Name="doneButton"  Margin="334,339,334,54" Click="doneButton_Click">
+        <Button FontSize="25" Background="Black" Foreground="Red" FontWeight="ExtraBold" Name="doneButton"  Margin="334,339,334,54" Click="doneButton_Click">
             Done
         </Button>
     </Grid>

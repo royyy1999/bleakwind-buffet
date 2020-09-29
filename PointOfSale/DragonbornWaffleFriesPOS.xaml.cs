@@ -14,20 +14,13 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for DoubleDraugrPOS.xaml
+    /// Interaction logic for DragonbornWaffleFriesPOS.xaml
     /// </summary>
-    public partial class DoubleDraugrPOS : UserControl
+    public partial class DragonbornWaffleFriesPOS : UserControl
     {
-        public DoubleDraugrPOS()
+        public DragonbornWaffleFriesPOS()
         {
             InitializeComponent();
-        }
-
-        private void doneButton_Click(object sender, RoutedEventArgs e)
-        {
-            var controlOrder = this.FindAncestor<MainWindow>();
-            MenuSelection m = new MenuSelection();
-            controlOrder.ScreenSwap(m);
         }
     }
 }

@@ -14,20 +14,13 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for DoubleDraugrPOS.xaml
+    /// Interaction logic for VokunSaladPOS.xaml
     /// </summary>
-    public partial class DoubleDraugrPOS : UserControl
+    public partial class VokunSaladPOS : UserControl
     {
-        public DoubleDraugrPOS()
+        public VokunSaladPOS()
         {
             InitializeComponent();
-        }
-
-        private void doneButton_Click(object sender, RoutedEventArgs e)
-        {
-            var controlOrder = this.FindAncestor<MainWindow>();
-            MenuSelection m = new MenuSelection();
-            controlOrder.ScreenSwap(m);
         }
     }
 }
