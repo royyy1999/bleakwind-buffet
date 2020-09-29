@@ -29,5 +29,12 @@ namespace PointOfSale
         {
             InitializeComponent();
         }
+
+        private void doneButton_Click(object sender, RoutedEventArgs e)
+        {
+            var controlOrder = this.FindAncestor<MainWindow>();
+            MenuSelection m = new MenuSelection();
+            controlOrder.ScreenSwap(m);
+        }
     }
 }

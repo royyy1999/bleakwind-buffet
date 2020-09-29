@@ -38,7 +38,7 @@ namespace PointOfSale
         /// </summary>
         /// <param name="sender">What triggered this event</param>
         /// <param name="e">The parameters of this event</param>
-        void BriarheartBurger_Click(object sender, RoutedEventArgs e)
+        private void BriarheartBurger_Click(object sender, RoutedEventArgs e)
         {
             var controlOrder = this.FindAncestor<MainWindow>();
             BriarheartBurgerPOS bb = new BriarheartBurgerPOS();
@@ -50,7 +50,7 @@ namespace PointOfSale
         /// </summary>
         /// <param name="sender">What triggered this event</param>
         /// <param name="e">The parameters of this event</param>
-        void DoubleDraugr_Click(object sender, RoutedEventArgs e)
+        private void DoubleDraugr_Click(object sender, RoutedEventArgs e)
         {
             var controlOrder = this.FindAncestor<MainWindow>();
             DoubleDraugrPOS bb = new DoubleDraugrPOS();
@@ -62,7 +62,7 @@ namespace PointOfSale
         /// </summary>
         /// <param name="sender">What triggered this event</param>
         /// <param name="e">The parameters of this event</param>
-         void ThalmorTriple_Click(object sender, RoutedEventArgs e)
+        private void ThalmorTriple_Click(object sender, RoutedEventArgs e)
         {
             var controlOrder = this.FindAncestor<MainWindow>();
             ThalmorTriplePOS bb = new ThalmorTriplePOS();
@@ -74,7 +74,7 @@ namespace PointOfSale
         /// </summary>
         /// <param name="sender">What triggered this event</param>
         /// <param name="e">The parameters of this event</param>
-        private void SmokehouseSkeleton_Click(object sender, RoutedEventArgs e)
+       private void SmokehouseSkeleton_Click(object sender, RoutedEventArgs e)
         {
             var controlOrder = this.FindAncestor<MainWindow>();
             SmokehouseSkeletonPOS bb = new SmokehouseSkeletonPOS();

@@ -39,5 +39,9 @@ namespace PointOfSale
             menuBorder.Child = e;
         }
 
+        private void MenuSelection_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
