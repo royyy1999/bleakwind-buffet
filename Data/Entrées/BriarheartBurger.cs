@@ -5,11 +5,13 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    public class BriarheartBurger : Entree, IOrderItem
+    public class BriarheartBurger : Entree, IOrderItem, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// Gets the price of the burger
         /// </summary>
@@ -20,30 +22,90 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public override uint Calories => 743;
 
+        private bool bun = true;
         /// <summary>
         /// Boolean property for bun on burger
         /// </summary>
-        public bool Bun{ get; set; } = true;
+        public bool Bun
+        {
+            get
+            {
+                return bun;
+            }
+            set
+            {
+                bun = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Bun"));
+            }
+        }
 
+        private bool ketchup = true;
         /// <summary>
         /// Boolean property for ketchup on burger
         /// </summary>
-        public bool Ketchup { get; set; } = true;
+        public bool Ketchup
+        {
+            get
+            {
+                return ketchup;
+            }
+            set
+            {
+                ketchup = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ketchup"));
+            }
+        }
 
+        private bool mustard = true;
         /// <summary>
         /// Boolean property for mustard on burger
         /// </summary>
-        public bool Mustard { get; set; } = true;
+        public bool Mustard
+        {
+            get
+            {
+                return mustard;
+            }
+            set
+            {
+                mustard = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Mustard"));
+            }
+        }
 
+        private bool pickle = true;
         /// <summary>
         /// Boolean property for pickles on burger
         /// </summary>
-        public bool Pickle { get; set; } = true;
+        public bool Pickle
+        {
+            get
+            {
+                return pickle;
+            }
+            set
+            {
+                pickle = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Pickle"));
+            }
+        }
 
+        private bool cheese = true;
         /// <summary>
         /// Boolean property for cheese on burger
         /// </summary>
-        public bool Cheese { get; set; } = true;
+        public bool Cheese
+        {
+            get
+            {
+                return cheese;
+            }
+            set
+            {
+                cheese = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Cheese"));
+            }
+        }
 
         /// <summary>
         /// Returns a List of special instructions on the burger.

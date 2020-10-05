@@ -8,11 +8,84 @@ using Xunit;
 using BleakwindBuffet.Data.Sides;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Enums;
+using System.ComponentModel;
+using BleakwindBuffet.Data.Drinks;
 
 namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
     public class DragonbornWaffleFriesTests
     {
+        [Fact]
+        public void ShouldBeAbleToImplementINotifyPropertyChangedInterface()
+        {
+            var df = new DragonbornWaffleFries();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(df);
+        }
+
+
+        [Fact]
+        public void ChangingSizeNotifiesPrice()
+        {
+            var df = new DragonbornWaffleFries();
+
+            Assert.PropertyChanged(df, "Price", () =>
+            {
+                df.Size = Size.Small;
+            });
+
+            Assert.PropertyChanged(df, "Price", () =>
+            {
+                df.Size = Size.Medium;
+            });
+
+            Assert.PropertyChanged(df, "Price", () =>
+            {
+                df.Size = Size.Large;
+            });
+        }
+
+        [Fact]
+        public void ChangingSizeNotifiesCalories()
+        {
+            var df = new DragonbornWaffleFries();
+
+            Assert.PropertyChanged(df, "Calories", () =>
+            {
+                df.Size = Size.Small;
+            });
+
+            Assert.PropertyChanged(df, "Calories", () =>
+            {
+                df.Size = Size.Medium;
+            });
+
+            Assert.PropertyChanged(df, "Calories", () =>
+            {
+                df.Size = Size.Large;
+            });
+        }
+
+        [Fact]
+        public void ChangingSizeNotifiesProperty()
+        {
+            var df = new DragonbornWaffleFries();
+
+            Assert.PropertyChanged(df, "Size", () =>
+            {
+                df.Size = Size.Small;
+            });
+
+            Assert.PropertyChanged(df, "Size", () =>
+            {
+                df.Size = Size.Medium;
+            });
+
+            Assert.PropertyChanged(df, "Size", () =>
+            {
+                df.Size = Size.Large;
+            });
+        }
+
         [Fact]
         public void ShouldBeAnEntree()
         {

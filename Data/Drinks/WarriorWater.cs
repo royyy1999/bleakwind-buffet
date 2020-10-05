@@ -6,20 +6,48 @@ using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class WarriorWater : Drink, IOrderItem
+    public class WarriorWater : Drink, IOrderItem, INotifyPropertyChanged
     {
-        /// <summary>
-        /// Boolean property for ice in drink.
-        /// </summary>
-        public bool Ice { get; set; } = true;
 
+        private bool ice = true;
         /// <summary>
-        /// Boolean property for lemon in drink.
+        /// Boolean property of ice in drink
         /// </summary>
-        public bool Lemon { get; set; } = false;
+        public bool Ice
+        {
+            get
+            {
+                return ice;
+            }
+
+            set
+            {
+                ice = value;
+                OnPropertyChanged("Ice");
+            }
+        }
+
+        private bool lemon = false;
+        /// <summary>
+        /// Boolean property of lemon in drink
+        /// </summary>
+        public bool Lemon
+        {
+            get
+            {
+                return lemon;
+            }
+
+            set
+            {
+                lemon = value;
+                OnPropertyChanged("Lemon");
+            }
+        }
 
         /// <summary>
         /// Assigns price of water

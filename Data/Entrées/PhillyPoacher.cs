@@ -5,11 +5,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    public class PhillyPoacher : Entree, IOrderItem
+    public class PhillyPoacher : Entree, IOrderItem, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Gets the price of the burger
         /// </summary>
@@ -20,20 +23,56 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public override uint Calories => 784;
 
+        private bool sirloin = true;
         /// <summary>
         /// Boolean property for sirloin 
         /// </summary>
-        public bool Sirloin { get; set; } = true;
+        public bool Sirloin
+        {
+            get
+            {
+                return sirloin;
+            }
+            set
+            {
+                sirloin = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Sirloin"));
+            }
+        }
 
+        private bool onion = true;
         /// <summary>
         /// Boolean property for onions
         /// </summary>
-        public bool Onion { get; set; } = true;
+        public bool Onion
+        {
+            get
+            {
+                return onion;
+            }
+            set
+            {
+                onion = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Onion"));
+            }
+        }
 
+        private bool roll = true;
         /// <summary>
         /// Boolean property for roll
         /// </summary>
-        public bool Roll { get; set; } = true;
+        public bool Roll
+        {
+            get
+            {
+                return roll;
+            }
+            set
+            {
+                roll = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Roll"));
+            }
+        }
 
         /// <summary>
         /// Returns a List of special instrucitons of sirloin

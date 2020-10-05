@@ -8,7 +8,8 @@
              d:DesignHeight="350" d:DesignWidth="200"
              Background="White">
     <Grid>
-        
+        <Button Margin="16,230,119,91">Cancel</Button>
+        <Button Margin="119,230,16,91">Finish</Button>
         <TextBox FontWeight="ExtraBlack" TextAlignment="Center" Margin="0,0,0,327">
             Order #
         </TextBox>

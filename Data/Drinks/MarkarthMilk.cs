@@ -6,16 +6,30 @@ using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class MarkarthMilk : Drink, IOrderItem
+    public class MarkarthMilk : Drink, IOrderItem, INotifyPropertyChanged
     {
-        /// <summary>
-        /// Boolean property for ice in drink
-        /// </summary>
-        public bool Ice { get; set; } = false;
 
+        private bool ice = false;
+        /// <summary>
+        /// Boolean property of ice in drink
+        /// </summary>
+        public bool Ice
+        {
+            get
+            {
+                return ice;
+            }
+
+            set
+            {
+                ice = value;
+                OnPropertyChanged("Ice");
+            }
+        }
         /// <summary>
         /// Assigns price of size drink ordered
         /// </summary>

@@ -4,9 +4,37 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PointOfSale"
+             xmlns:enums="clr-namespace:BleakwindBuffet.Data.Enums;assembly=Data" 
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
+        <ObjectDataProvider x:Key="size" MethodName="GetValues" ObjectType="{x:Type system:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="enums:Size"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+
+        <ObjectDataProvider x:Key="flavor" MethodName="GetValues" ObjectType="{x:Type system:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="enums:SodaFlavor"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+
+        <Style TargetType="{x:Type ListBoxItem}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Grid Background="Red">
+                            <RadioButton FontWeight="ExtraBold" Foreground="White" Content="{TemplateBinding ContentPresenter.Content}" IsChecked="{Binding Path=IsSelected, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}">
+                            </RadioButton>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="Red"></Setter>
+        </Style>
+        
         <ControlTemplate x:Key="ButtonTemplate1" TargetType="{x:Type Button}">
             <Border x:Name="border" CornerRadius="23" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="true">
                 <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
@@ -32,23 +60,16 @@
         </ControlTemplate>
     </UserControl.Resources>
     <Grid>
-        <ListBox Background="Red">
+        <StackPanel Background="Red">
             <TextBlock FontWeight="ExtraBold" FontSize="23">Size</TextBlock>
-            <RadioButton GroupName="Size" IsChecked="True" Foreground="White" FontWeight="ExtraBold">Small</RadioButton>
-            <RadioButton GroupName="Size" Foreground="White" FontWeight="ExtraBold">Medium</RadioButton>
-            <RadioButton GroupName="Size" Foreground="White" FontWeight="ExtraBold">Large</RadioButton>
+            <ListBox Background="Red" BorderBrush="Red" ItemsSource="{Binding Source={StaticResource size}}"  SelectedItem="{Binding Path=Size}"/>
             <TextBlock FontWeight="ExtraBold" FontSize="23">Flavor</TextBlock>
-            <RadioButton GroupName="Flavor" Foreground="White" FontWeight="ExtraBold">Blackberry</RadioButton>
-            <RadioButton GroupName="Flavor" IsChecked="True"  Foreground="White" FontWeight="ExtraBold">Cherry</RadioButton>
-            <RadioButton GroupName="Flavor" Foreground="White" FontWeight="ExtraBold">Grapefruit</RadioButton>
-            <RadioButton GroupName="Flavor" Foreground="White" FontWeight="ExtraBold">Lemon</RadioButton>
-            <RadioButton GroupName="Flavor" Foreground="White" FontWeight="ExtraBold">Peach</RadioButton>
-            <RadioButton GroupName="Flavor" Foreground="White" FontWeight="ExtraBold">Watermelon</RadioButton>
+            <ListBox Background="Red" BorderBrush="Red" ItemsSource="{Binding Source={StaticResource flavor}}"  SelectedItem="{Binding Path=SodaFlavor}"/>
             <TextBlock FontWeight="ExtraBold" FontSize="23">Special Instructions</TextBlock>
-            <CheckBox IsChecked="True" Foreground="White" FontWeight="ExtraBold">Ice</CheckBox>
+            <CheckBox IsChecked="{Binding Path = Ice}" Foreground="White" FontWeight="ExtraBold">Ice</CheckBox>
             <Button FontSize="24" Background="Black" Foreground="rED" FontWeight="ExtraBold" Name="doneButton"  Click="doneButton_Click">
                 Done
             </Button>
-        </ListBox>
+        </StackPanel>
     </Grid>
 </UserControl>

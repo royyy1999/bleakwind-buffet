@@ -5,11 +5,13 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    public class SmokehouseSkeleton : Entree, IOrderItem
+    public class SmokehouseSkeleton : Entree, IOrderItem, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// Gets the price of the burger
         /// </summary>
@@ -20,25 +22,73 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public override uint Calories => 602;
 
+        private bool sausagelink = true;
         /// <summary>
         /// Boolean property for sausage on order
         /// </summary>
-        public bool SausageLink { get; set; } = true;
+        public bool SausageLink
+        {
+            get
+            {
+                return sausagelink;
+            }
+            set
+            {
+                sausagelink = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SausageLink"));
+            }
+        }
 
+        private bool egg = true;
         /// <summary>
         /// Boolean property for eggs on order
         /// </summary>
-        public bool Egg { get; set; } = true;
+        public bool Egg
+        {
+            get
+            {
+                return egg;
+            }
+            set
+            {
+                egg = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Egg"));
+            }
+        }
 
+        private bool hashbrowns = true;
         /// <summary>
         /// Boolean property for hash browns on order
         /// </summary>
-        public bool HashBrowns { get; set; } = true;
+        public bool HashBrowns
+        {
+            get
+            {
+                return hashbrowns;
+            }
+            set
+            {
+                hashbrowns = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("HashBrowns"));
+            }
+        }
 
+        private bool pancake = true;
         /// <summary>
         /// Boolean property for pancakes on order
         /// </summary>
-        public bool Pancake { get; set; } = true;
+        public bool Pancake
+        {
+            get
+            {
+                return pancake;
+            }
+            set
+            {
+                pancake = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Pancake"));
+            }
+        }
 
 
         /// <summary>

@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data.Sides;
 
 namespace PointOfSale
 {
@@ -22,12 +23,14 @@ namespace PointOfSale
     /// </summary>
     public partial class FriedMiraakPOS : UserControl
     {
+        FriedMiraak fm = new FriedMiraak();
         /// <summary>
         /// Iniitializes the item
         /// </summary>
         public FriedMiraakPOS()
         {
             InitializeComponent();
+            DataContext = fm;
         }
 
         /// <summary>

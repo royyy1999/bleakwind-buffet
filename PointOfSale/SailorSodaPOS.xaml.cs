@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data.Drinks;
 
 namespace PointOfSale
 {
@@ -22,12 +23,14 @@ namespace PointOfSale
     /// </summary>
     public partial class SailorSodaPOS : UserControl
     {
+        SailorSoda ss = new SailorSoda();
         /// <summary>
         /// Initializes the item
         /// </summary>
         public SailorSodaPOS()
         {
             InitializeComponent();
+            DataContext = ss;
         }
 
         /// <summary>

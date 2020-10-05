@@ -6,11 +6,14 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Sides
 {
-    public abstract class Side
+    public abstract class Side : INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Backing variable for size of drink
         /// </summary>
@@ -27,6 +30,9 @@ namespace BleakwindBuffet.Data.Sides
             set
             {
                 size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
             }
         }
 

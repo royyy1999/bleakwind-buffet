@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data.Drinks;
 
 namespace PointOfSale
 {
@@ -22,12 +23,14 @@ namespace PointOfSale
     /// </summary>
     public partial class AretinoAppleJuicePOS : UserControl
     {
+        AretinoAppleJuice aj = new AretinoAppleJuice();
         /// <summary>
         /// Initializes the item
         /// </summary>
         public AretinoAppleJuicePOS()
         {
             InitializeComponent();
+            DataContext = aj;
         }
 
         /// <summary>

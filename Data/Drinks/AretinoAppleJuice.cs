@@ -7,15 +7,30 @@ using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class AretinoAppleJuice : Drink, IOrderItem
-    {
+    public class AretinoAppleJuice : Drink, IOrderItem, INotifyPropertyChanged
+    { 
+
+        private bool ice = false;
         /// <summary>
         /// Boolean property of ice in drink
         /// </summary>
-        public bool Ice { get; set; } = false;
+        public bool Ice
+        {
+            get 
+            { 
+                return ice;
+            }
+
+            set
+            {
+                ice = value;
+                OnPropertyChanged("Ice");
+            }
+        }
 
         /// <summary>
         /// Assigns price to size of drink 

@@ -85,10 +85,10 @@
     <Grid>
         <ListBox Background="Red">
             <TextBlock FontWeight="ExtraBold" FontSize="23">Special Instructions</TextBlock>
-            <CheckBox IsChecked="True" Foreground="White" FontWeight="ExtraBold">Broccoli</CheckBox>
-            <CheckBox IsChecked="True" Foreground="White" FontWeight="ExtraBold">Mushrooms</CheckBox>
-            <CheckBox IsChecked="True" Foreground="White" FontWeight="ExtraBold">Tomato</CheckBox>
-            <CheckBox IsChecked="True" Foreground="White" FontWeight="ExtraBold">Cheddar</CheckBox>
+            <CheckBox IsChecked="{Binding Path=Broccoli}" Foreground="White" FontWeight="ExtraBold">Broccoli</CheckBox>
+            <CheckBox IsChecked="{Binding Path=Mushrooms}" Foreground="White" FontWeight="ExtraBold">Mushrooms</CheckBox>
+            <CheckBox IsChecked="{Binding Path=Tomato}" Foreground="White" FontWeight="ExtraBold">Tomato</CheckBox>
+            <CheckBox IsChecked="{Binding Path=Cheddar}" Foreground="White" FontWeight="ExtraBold">Cheddar</CheckBox>
             <Button FontSize="24" Background="Black" Foreground="rED" FontWeight="ExtraBold" Name="doneButton"  Click="doneButton_Click">
                 Done
             </Button>

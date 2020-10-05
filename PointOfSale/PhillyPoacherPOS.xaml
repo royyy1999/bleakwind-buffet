@@ -34,9 +34,9 @@
     <Grid>
         <ListBox Background="Red">
             <TextBlock FontWeight="ExtraBold" FontSize="23">Special Instructions</TextBlock>
-            <CheckBox IsChecked="True" Foreground="White" FontWeight="ExtraBold">Sirloin</CheckBox>
-            <CheckBox IsChecked="True" Foreground="White" FontWeight="ExtraBold">Onion</CheckBox>
-            <CheckBox IsChecked="True" Foreground="White" FontWeight="ExtraBold">Roll</CheckBox>
+            <CheckBox IsChecked="{Binding Path=Sirloin}" Foreground="White" FontWeight="ExtraBold">Sirloin</CheckBox>
+            <CheckBox IsChecked="{Binding Path=Onion}" Foreground="White" FontWeight="ExtraBold">Onion</CheckBox>
+            <CheckBox IsChecked="{Binding Path=Roll}" Foreground="White" FontWeight="ExtraBold">Roll</CheckBox>
             <Button FontSize="24" Background="Black" Foreground="Red" FontWeight="ExtraBold" Name="doneButton" Click="doneButton_Click">
                 Done
             </Button>

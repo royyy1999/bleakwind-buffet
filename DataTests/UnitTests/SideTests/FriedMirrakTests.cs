@@ -14,6 +14,69 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
     public class FriedMiraakTests
     {
         [Fact]
+        public void ChangingSizeNotifiesIceProperty()
+        {
+            var fm = new FriedMiraak();
+
+            Assert.PropertyChanged(fm, "Size", () =>
+            {
+                fm.Size = Size.Small;
+            });
+
+            Assert.PropertyChanged(fm, "Size", () =>
+            {
+                fm.Size = Size.Medium;
+            });
+
+            Assert.PropertyChanged(fm, "Size", () =>
+            {
+                fm.Size = Size.Large;
+            });
+        }
+
+        [Fact]
+        public void ChangingSizeNotifiesPrice()
+        {
+            var fm = new FriedMiraak();
+
+            Assert.PropertyChanged(fm, "Price", () =>
+            {
+                fm.Size = Size.Small;
+            });
+
+            Assert.PropertyChanged(fm, "Price", () =>
+            {
+                fm.Size = Size.Medium;
+            });
+
+            Assert.PropertyChanged(fm, "Price", () =>
+            {
+                fm.Size = Size.Large;
+            });
+        }
+
+        [Fact]
+        public void ChangingSizeNotifiesCalories()
+        {
+            var fm = new FriedMiraak();
+
+            Assert.PropertyChanged(fm, "Calories", () =>
+            {
+                fm.Size = Size.Small;
+            });
+
+            Assert.PropertyChanged(fm, "Calories", () =>
+            {
+                fm.Size = Size.Medium;
+            });
+
+            Assert.PropertyChanged(fm, "Calories", () =>
+            {
+                fm.Size = Size.Large;
+            });
+        }
+
+        [Fact]
         public void ShouldBeAnEntree()
         {
             FriedMiraak fm = new FriedMiraak();

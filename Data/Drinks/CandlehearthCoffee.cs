@@ -6,15 +6,30 @@ using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class CandlehearthCoffee : Drink, IOrderItem
+    public class CandlehearthCoffee : Drink, IOrderItem, INotifyPropertyChanged
     {
+
+        private bool ice = false;
         /// <summary>
-        /// Boolean property for ice in drink
+        /// Boolean property of ice in drink
         /// </summary>
-        public bool Ice { get; set; } = false;
+        public bool Ice
+        {
+            get
+            {
+                return ice;
+            }
+
+            set
+            {
+                ice = value;
+                OnPropertyChanged("Ice");
+            }
+        }
 
         /// <summary>
         /// Assigns price to size of drink
@@ -58,15 +73,39 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
+        private bool roomForCream = false;
         /// <summary>
         /// Boolean property for if theres room for cream in the coffee.
         /// </summary>
-        public bool RoomForCream { get; set; } = false;
+        public bool RoomForCream
+        {
+            get
+            {
+                return roomForCream;
+            }
+            set
+            {
+                roomForCream = value;
+                OnPropertyChanged("RoomForCream");
+            }
+        }
 
+        private bool decaf = false;
         /// <summary>
         /// Boolean property for a decaf coffee.
         /// </summary>
-        public bool Decaf { get; set; } = false; 
+        public bool Decaf
+        {
+            get
+            {
+                return decaf;
+            }
+            set
+            {
+                decaf = value;
+                OnPropertyChanged("Decaf");
+            }
+        }
 
         /// <summary>
         /// Returns a List of special instructions of coffee
