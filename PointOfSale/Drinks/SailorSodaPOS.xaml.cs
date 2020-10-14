@@ -1,6 +1,6 @@
 ﻿/* Author: Roy Fernandez
- * Class: MarkarthMilkPOS.xaml.cs
- * Purpose: A class for the Markarth Milk item
+ * Class: SailorSodaPOS.xaml.cs
+ * Purpose: A class for the Sailor Soda item
  */
 using System;
 using System.Collections.Generic;
@@ -14,23 +14,26 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Drinks;
+using BleakwindBuffet.Data;
 
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for MarkarthMilkPOS.xaml
+    /// Interaction logic for SailorSodaPOS.xaml
     /// </summary>
-    public partial class MarkarthMilkPOS : UserControl
+    public partial class SailorSodaPOS : UserControl
     {
-        MarkarthMilk mm = new MarkarthMilk();
+        SailorSoda ss;
         /// <summary>
         /// Initializes the item
         /// </summary>
-        public MarkarthMilkPOS()
+        public SailorSodaPOS(SailorSoda item)
         {
             InitializeComponent();
-            DataContext = mm;
+            ss = item;
+            DataContext = ss;
         }
 
         /// <summary>

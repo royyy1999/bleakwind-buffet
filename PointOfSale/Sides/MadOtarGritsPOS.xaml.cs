@@ -1,6 +1,6 @@
 ﻿/* Author: Roy Fernandez
- * Class: SailorSodaPOS.xaml.cs
- * Purpose: A class for the Sailor Soda item
+ * Class: MadOtarGritsPOS.xaml.cs
+ * Purpose: A class for the Mad Otar Grits item
  */
 using System;
 using System.Collections.Generic;
@@ -14,23 +14,25 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using BleakwindBuffet.Data.Drinks;
+using BleakwindBuffet.Data;
+using BleakwindBuffet.Data.Sides;
 
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for SailorSodaPOS.xaml
+    /// Interaction logic for MadOtarGritsPOS.xaml
     /// </summary>
-    public partial class SailorSodaPOS : UserControl
+    public partial class MadOtarGritsPOS : UserControl
     {
-        SailorSoda ss = new SailorSoda();
+        MadOtarGrits mg;
         /// <summary>
         /// Initializes the item
         /// </summary>
-        public SailorSodaPOS()
+        public MadOtarGritsPOS(MadOtarGrits item)
         {
             InitializeComponent();
-            DataContext = ss;
+            mg = item;
+            DataContext = mg;
         }
 
         /// <summary>

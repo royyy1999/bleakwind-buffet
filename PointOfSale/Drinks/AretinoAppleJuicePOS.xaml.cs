@@ -1,6 +1,6 @@
 ﻿/* Author: Roy Fernandez
- * Class: DragonbornWaffleFriesPOS.xaml.cs
- * Purpose: A class for the Dragonborn Waffle Fries item
+ * Class: AretinoAppleJuicePOS.xaml.cs
+ * Purpose: A class for the Aretino Apple Juice item
  */
 using System;
 using System.Collections.Generic;
@@ -14,23 +14,25 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using BleakwindBuffet.Data.Sides;
+using BleakwindBuffet.Data;
+using BleakwindBuffet.Data.Drinks;
 
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for DragonbornWaffleFriesPOS.xaml
+    /// Interaction logic for AretinoAppleJuicePOS.xaml
     /// </summary>
-    public partial class DragonbornWaffleFriesPOS : UserControl
+    public partial class AretinoAppleJuicePOS : UserControl
     {
-        DragonbornWaffleFries df = new DragonbornWaffleFries();
+        AretinoAppleJuice aj;
         /// <summary>
         /// Initializes the item
         /// </summary>
-        public DragonbornWaffleFriesPOS()
+        public AretinoAppleJuicePOS(AretinoAppleJuice item)
         {
             InitializeComponent();
-            DataContext = df;
+            aj = item;
+            DataContext = aj;
         }
 
         /// <summary>

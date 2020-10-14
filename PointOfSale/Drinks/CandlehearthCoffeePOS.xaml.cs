@@ -1,6 +1,6 @@
 ﻿/* Author: Roy Fernandez
- * Class: ThalmorTriplePOS.xaml.cs
- * Purpose: A class for the Thalmor Triple item
+ * Class: CandlehearthCoffeePOS.xaml.cs
+ * Purpose: A class for the Candlehearth Coffee item
  */
 using System;
 using System.Collections.Generic;
@@ -14,23 +14,25 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using BleakwindBuffet.Data.Entrees;
+using BleakwindBuffet.Data;
+using BleakwindBuffet.Data.Drinks;
 
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for ThalmorTriplePOS.xaml
+    /// Interaction logic for CandlehearthCoffeePOS.xaml
     /// </summary>
-    public partial class ThalmorTriplePOS : UserControl
+    public partial class CandlehearthCoffeePOS : UserControl
     {
-        ThalmorTriple tt = new ThalmorTriple();
+        CandlehearthCoffee cc;
         /// <summary>
-        /// Initializes the item
+        /// Initializes the item`
         /// </summary>
-        public ThalmorTriplePOS()
+        public CandlehearthCoffeePOS(CandlehearthCoffee item)
         {
             InitializeComponent();
-            DataContext = tt;
+            cc = item;
+            DataContext = cc;
         }
 
         /// <summary>

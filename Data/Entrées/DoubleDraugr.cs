@@ -167,14 +167,41 @@ namespace BleakwindBuffet.Data.Entrees
             get
             {
                 List<string> instructions = new List<string>();
-                if (!Bun) instructions.Add("Hold bun");
-                if (!Ketchup) instructions.Add("Hold ketchup");
-                if (!Mustard) instructions.Add("Hold mustard");
-                if (!Pickle) instructions.Add("Hold pickle");
-                if (!Cheese) instructions.Add("Hold cheese");
-                if (!Tomato) instructions.Add("Hold tomato");
-                if (!Lettuce) instructions.Add("Hold lettuce");
-                if (!Mayo) instructions.Add("Hold mayo");
+                if (!Bun)
+                {
+                    instructions.Add("Hold bun");
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                }
+                if (!Ketchup)
+                {
+                    instructions.Add("Hold ketchup");
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                }
+                if (!Mustard)
+                {
+                    instructions.Add("Hold mustard");
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                }
+                if (!Pickle)
+                {
+                    instructions.Add("Hold pickle");
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                }
+                if (!Cheese)
+                {
+                    instructions.Add("Hold cheese");
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                }
+                if (!Lettuce)
+                {
+                    instructions.Add("Hold lettuce");
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                }
+                if (!Mayo)
+                {
+                    instructions.Add("Hold mayo");
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                }
                 return instructions;
             }
         }

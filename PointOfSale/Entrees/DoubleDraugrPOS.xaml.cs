@@ -1,6 +1,6 @@
 ﻿/* Author: Roy Fernandez
- * Class: SmokehouseSkeleton.xaml.cs
- * Purpose: A class for the Smokehouse Skeleton item
+ * Class: DoubleDraugrPOS.xaml.cs
+ * Purpose: A class for the Double Draugr item
  */
 using System;
 using System.Collections.Generic;
@@ -14,23 +14,26 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrees;
 
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for SmokehouseSkeletonPOS.xaml
+    /// Interaction logic for DoubleDraugrPOS.xaml
     /// </summary>
-    public partial class SmokehouseSkeletonPOS : UserControl
+    public partial class DoubleDraugrPOS : UserControl
     {
-        SmokehouseSkeleton ss = new SmokehouseSkeleton();
+        DoubleDraugr dd;
         /// <summary>
         /// Initializes the item
         /// </summary>
-        public SmokehouseSkeletonPOS()
+        public DoubleDraugrPOS(DoubleDraugr item)
         {
             InitializeComponent();
-            DataContext = ss;
+            dd = item;
+            DataContext = dd;
+          
         }
 
         /// <summary>

@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BleakwindBuffet.Data.Entrees;
+using BleakwindBuffet.Data;
 
 namespace PointOfSale
 {
@@ -23,13 +24,15 @@ namespace PointOfSale
     /// </summary>
     public partial class BriarheartBurgerPOS : UserControl
     {
-        BriarheartBurger bb = new BriarheartBurger();
-        public BriarheartBurgerPOS()
+        BriarheartBurger bb;
+        public BriarheartBurgerPOS(BriarheartBurger item)
         {
             InitializeComponent();
+            bb = item; 
             DataContext = bb;
+            
         }
-
+        
         /// <summary>
         /// Event handler for the Done button
         /// </summary>

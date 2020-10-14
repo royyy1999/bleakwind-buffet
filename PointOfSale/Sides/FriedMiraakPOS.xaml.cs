@@ -1,6 +1,6 @@
 ﻿/* Author: Roy Fernandez
- * Class: CandlehearthCoffeePOS.xaml.cs
- * Purpose: A class for the Candlehearth Coffee item
+ * Class: FriedMiraakPOS.xaml.cs
+ * Purpose: A class for the Fried Miraak item
  */
 using System;
 using System.Collections.Generic;
@@ -14,23 +14,25 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using BleakwindBuffet.Data.Drinks;
+using BleakwindBuffet.Data.Sides;
+using BleakwindBuffet.Data;
 
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for CandlehearthCoffeePOS.xaml
+    /// Interaction logic for FriedMiraakPOS.xaml
     /// </summary>
-    public partial class CandlehearthCoffeePOS : UserControl
+    public partial class FriedMiraakPOS : UserControl
     {
-        CandlehearthCoffee cc = new CandlehearthCoffee();
+        FriedMiraak fm;
         /// <summary>
-        /// Initializes the item`
+        /// Iniitializes the item
         /// </summary>
-        public CandlehearthCoffeePOS()
+        public FriedMiraakPOS(FriedMiraak item)
         {
             InitializeComponent();
-            DataContext = cc;
+            fm = item;
+            DataContext = fm;
         }
 
         /// <summary>

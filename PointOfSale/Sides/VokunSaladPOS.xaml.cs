@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BleakwindBuffet.Data.Sides;
+using BleakwindBuffet.Data;
 
 namespace PointOfSale
 {
@@ -23,13 +24,14 @@ namespace PointOfSale
     /// </summary>
     public partial class VokunSaladPOS : UserControl
     {
-        VokunSalad vs = new VokunSalad();
+        VokunSalad vs;
         /// <summary>
         /// Initializes the item
         /// </summary>
-        public VokunSaladPOS()
+        public VokunSaladPOS(VokunSalad item)
         {
             InitializeComponent();
+            vs = item;
             DataContext = vs;
         }
 

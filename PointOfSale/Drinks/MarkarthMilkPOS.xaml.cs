@@ -1,6 +1,6 @@
 ﻿/* Author: Roy Fernandez
- * Class: FriedMiraakPOS.xaml.cs
- * Purpose: A class for the Fried Miraak item
+ * Class: MarkarthMilkPOS.xaml.cs
+ * Purpose: A class for the Markarth Milk item
  */
 using System;
 using System.Collections.Generic;
@@ -14,23 +14,25 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using BleakwindBuffet.Data.Sides;
+using BleakwindBuffet.Data;
+using BleakwindBuffet.Data.Drinks;
 
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for FriedMiraakPOS.xaml
+    /// Interaction logic for MarkarthMilkPOS.xaml
     /// </summary>
-    public partial class FriedMiraakPOS : UserControl
+    public partial class MarkarthMilkPOS : UserControl
     {
-        FriedMiraak fm = new FriedMiraak();
+        MarkarthMilk mm;
         /// <summary>
-        /// Iniitializes the item
+        /// Initializes the item
         /// </summary>
-        public FriedMiraakPOS()
+        public MarkarthMilkPOS(MarkarthMilk item)
         {
             InitializeComponent();
-            DataContext = fm;
+            mm = item;
+            DataContext = mm;
         }
 
         /// <summary>

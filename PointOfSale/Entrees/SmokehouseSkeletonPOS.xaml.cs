@@ -1,6 +1,6 @@
 ﻿/* Author: Roy Fernandez
- * Class: PhillyPoacherPOS.xaml.cs
- * Purpose: A class for the Philly Poacher Water item
+ * Class: SmokehouseSkeleton.xaml.cs
+ * Purpose: A class for the Smokehouse Skeleton item
  */
 using System;
 using System.Collections.Generic;
@@ -14,23 +14,25 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrees;
 
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for PhillyPoacherPOS.xaml
+    /// Interaction logic for SmokehouseSkeletonPOS.xaml
     /// </summary>
-    public partial class PhillyPoacherPOS : UserControl
+    public partial class SmokehouseSkeletonPOS : UserControl
     {
-        PhillyPoacher pp = new PhillyPoacher();
+        SmokehouseSkeleton ss;
         /// <summary>
         /// Initializes the item
         /// </summary>
-        public PhillyPoacherPOS()
+        public SmokehouseSkeletonPOS(SmokehouseSkeleton item)
         {
             InitializeComponent();
-            DataContext = pp;
+            ss = item;
+            DataContext = ss;
         }
 
         /// <summary>

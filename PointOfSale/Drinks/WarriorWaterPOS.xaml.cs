@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BleakwindBuffet.Data.Drinks;
+using BleakwindBuffet.Data;
 
 namespace PointOfSale
 {
@@ -23,13 +24,14 @@ namespace PointOfSale
     /// </summary>
     public partial class WarriorWaterPOS : UserControl
     {
-        WarriorWater ww = new WarriorWater();
+        WarriorWater ww;
         /// <summary>
         /// Initializes the item
         /// </summary>
-        public WarriorWaterPOS()
+        public WarriorWaterPOS(WarriorWater item)
         {
             InitializeComponent();
+            ww = item;
             DataContext = ww;
         }
 

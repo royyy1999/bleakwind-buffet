@@ -1,6 +1,6 @@
 ﻿/* Author: Roy Fernandez
- * Class: DoubleDraugrPOS.xaml.cs
- * Purpose: A class for the Double Draugr item
+ * Class: GardenOrcOmelettePOS.xaml.cs
+ * Purpose: A class for the GardenOrcOmelette item
  */
 using System;
 using System.Collections.Generic;
@@ -14,23 +14,25 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrees;
 
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for DoubleDraugrPOS.xaml
+    /// Interaction logic for GardenOrcOmelettePOS.xaml
     /// </summary>
-    public partial class DoubleDraugrPOS : UserControl
+    public partial class GardenOrcOmelettePOS : UserControl
     {
-        DoubleDraugr dd = new DoubleDraugr();
+        GardenOrcOmelette go;
         /// <summary>
         /// Initializes the item
         /// </summary>
-        public DoubleDraugrPOS()
+        public GardenOrcOmelettePOS(GardenOrcOmelette item)
         {
             InitializeComponent();
-            DataContext = dd;
+            go = item;
+            DataContext = go;
         }
 
         /// <summary>

@@ -1,6 +1,6 @@
 ﻿/* Author: Roy Fernandez
- * Class: MadOtarGritsPOS.xaml.cs
- * Purpose: A class for the Mad Otar Grits item
+ * Class: ThugsTBonePOS.xaml.cs
+ * Purpose: A class for the Thugs T-Bone item
  */
 using System;
 using System.Collections.Generic;
@@ -14,30 +14,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using BleakwindBuffet.Data.Sides;
+using BleakwindBuffet.Data;
+using BleakwindBuffet.Data.Entrees;
 
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for MadOtarGritsPOS.xaml
+    /// Interaction logic for ThugsTBonePOS.xaml
     /// </summary>
-    public partial class MadOtarGritsPOS : UserControl
+    public partial class ThugsTBonePOS : UserControl
     {
-        MadOtarGrits mg = new MadOtarGrits();
+        ThugsTBone tb;
         /// <summary>
-        /// Initializes the item
+        /// initializes the item
         /// </summary>
-        public MadOtarGritsPOS()
+        public ThugsTBonePOS(ThugsTBone item)
         {
             InitializeComponent();
-            DataContext = mg;
+            tb = item;
+            DataContext = tb;
         }
 
-        /// <summary>
-        /// Event handler for the Done button
-        /// </summary>
-        /// <param name="sender">What triggered this event</param>
-        /// <param name="e">The parameters of this event</param>
         private void doneButton_Click(object sender, RoutedEventArgs e)
         {
             var controlOrder = this.FindAncestor<MainWindow>();

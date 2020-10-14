@@ -8,11 +8,33 @@
              d:DesignHeight="350" d:DesignWidth="200"
              Background="White">
     <Grid>
-        <Button Margin="16,230,119,91">Cancel</Button>
-        <Button Margin="119,230,16,91">Finish</Button>
-        <TextBox FontWeight="ExtraBlack" TextAlignment="Center" Margin="0,0,0,327">
-            Order #
-        </TextBox>
-        <TextBox FontWeight="ExtraBlack" TextAlignment="Center" Margin="0,268,0,0" Text="&#xD;&#xA;Subtotal: &#xA;Tax:&#xA; Total:"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="orderView" Grid.ColumnSpan="2"  Margin="0,24,0,118" ItemsSource="{Binding}">
+            <ListBox.ItemTemplate >
+                <DataTemplate>
+                    <Viewbox>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Path=ToString}"/>
+                            <TextBlock  Text="{Binding Path=Price}"/>
+                            <TextBlock Text="{Binding Path=SpecialInstructions}"/>
+                        </StackPanel>
+                    </Viewbox>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Button Grid.Column="0" Margin="17,239,17,80"  Click="Cancel_Click">Cancel</Button>
+        <Button Grid.Column="1" Margin="17,239,17,80" Click="Finish_Click" RenderTransformOrigin="0.538,0.31">Finish</Button>
+        <TextBlock Grid.ColumnSpan="2" FontWeight="ExtraBlack" TextAlignment="Center" Margin="0,0,0,325" Text="Order #"/>
+        <TextBlock FontWeight="ExtraBlack" TextAlignment="Center" Margin="42,0,8,325" Text="{Binding Path=Count}" Grid.Column="1"/>
+        <TextBlock Grid.Column="0" FontWeight="ExtraBlack" TextAlignment="Center" Margin="3,276,28,56" Text="Subtotal:"/>
+        <TextBlock Grid.Column="1" FontWeight="ExtraBlack" TextAlignment="Left" Margin="20,276,5,56" Text="{Binding Path=Subtotal, StringFormat=c}" RenderTransformOrigin="0.095,0.611"/>
+        <TextBlock Grid.Column="0" FontWeight="ExtraBlack" TextAlignment="Center" Margin="29,300,28,26" Text="Tax:" />
+        <TextBlock Grid.Column="1" FontWeight="ExtraBlack" TextAlignment="Left" Margin="20,300,7,26" Text="{Binding Path=Tax, StringFormat=c}"/>
+        <TextBlock Grid.Column="0" FontWeight="ExtraBlack" TextAlignment="Center" Margin="25,324,28,0" Text="Total:"/>
+        <TextBlock Grid.Column="1" FontWeight="ExtraBlack" TextAlignment="Left" Margin="20,324,13,6" Text="{Binding Path=Total, StringFormat=c}"/>
     </Grid>
 </UserControl>

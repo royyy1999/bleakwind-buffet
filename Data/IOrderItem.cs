@@ -5,11 +5,13 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data
 {
-    public interface IOrderItem
+    public interface IOrderItem : INotifyPropertyChanged
     {
+        event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// Returns price of item
         /// </summary>

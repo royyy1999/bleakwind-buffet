@@ -1,6 +1,6 @@
 ﻿/* Author: Roy Fernandez
- * Class: AretinoAppleJuicePOS.xaml.cs
- * Purpose: A class for the Aretino Apple Juice item
+ * Class: ThalmorTriplePOS.xaml.cs
+ * Purpose: A class for the Thalmor Triple item
  */
 using System;
 using System.Collections.Generic;
@@ -14,23 +14,25 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using BleakwindBuffet.Data.Drinks;
+using BleakwindBuffet.Data;
+using BleakwindBuffet.Data.Entrees;
 
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for AretinoAppleJuicePOS.xaml
+    /// Interaction logic for ThalmorTriplePOS.xaml
     /// </summary>
-    public partial class AretinoAppleJuicePOS : UserControl
+    public partial class ThalmorTriplePOS : UserControl
     {
-        AretinoAppleJuice aj = new AretinoAppleJuice();
+        ThalmorTriple tt;
         /// <summary>
         /// Initializes the item
         /// </summary>
-        public AretinoAppleJuicePOS()
+        public ThalmorTriplePOS(ThalmorTriple item)
         {
             InitializeComponent();
-            DataContext = aj;
+            tt = item;
+            DataContext = tt;
         }
 
         /// <summary>

@@ -17,6 +17,7 @@ using System.Windows.Shapes;
 using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Sides;
 using BleakwindBuffet.Data.Drinks;
+using BleakwindBuffet.Data;
 
 namespace PointOfSale
 {
@@ -25,14 +26,20 @@ namespace PointOfSale
     /// </summary>
     public partial class MenuSelection : UserControl
     {
+         OrderMenu o;
+          // Find a way to connect menu selection class to order
         /// <summary>
         /// Initializes buttons
         /// </summary>
         public MenuSelection()
         {
             InitializeComponent();
+           
+            if (DataContext is OrderMenu o)
+                this.o = o;
         }
 
+        
         /// <summary>
         /// Event handler for the Briarheart Burger button
         /// </summary>
@@ -41,7 +48,11 @@ namespace PointOfSale
         private void BriarheartBurger_Click(object sender, RoutedEventArgs e)
         {
             var controlOrder = this.FindAncestor<MainWindow>();
-            BriarheartBurgerPOS bb = new BriarheartBurgerPOS();
+            BriarheartBurger item = new BriarheartBurger();
+            BriarheartBurgerPOS bb = new BriarheartBurgerPOS(item);
+
+            if(DataContext is OrderMenu ord) ord.Add(item);               
+
             controlOrder.ScreenSwap(bb);
         }
 
@@ -53,7 +64,11 @@ namespace PointOfSale
         private void DoubleDraugr_Click(object sender, RoutedEventArgs e)
         {
             var controlOrder = this.FindAncestor<MainWindow>();
-            DoubleDraugrPOS bb = new DoubleDraugrPOS();
+            DoubleDraugr item = new DoubleDraugr();
+            DoubleDraugrPOS bb = new DoubleDraugrPOS(item);
+
+            if (DataContext is OrderMenu ord) ord.Add(item);
+
             controlOrder.ScreenSwap(bb);
         }
 
@@ -65,7 +80,11 @@ namespace PointOfSale
         private void ThalmorTriple_Click(object sender, RoutedEventArgs e)
         {
             var controlOrder = this.FindAncestor<MainWindow>();
-            ThalmorTriplePOS bb = new ThalmorTriplePOS();
+            ThalmorTriple item = new ThalmorTriple();
+            ThalmorTriplePOS bb = new ThalmorTriplePOS(item);
+
+            if (DataContext is OrderMenu ord) ord.Add(item);
+
             controlOrder.ScreenSwap(bb);
         }
 
@@ -77,7 +96,11 @@ namespace PointOfSale
        private void SmokehouseSkeleton_Click(object sender, RoutedEventArgs e)
         {
             var controlOrder = this.FindAncestor<MainWindow>();
-            SmokehouseSkeletonPOS bb = new SmokehouseSkeletonPOS();
+            SmokehouseSkeleton item = new SmokehouseSkeleton();
+            SmokehouseSkeletonPOS bb = new SmokehouseSkeletonPOS(item);
+
+            if (DataContext is OrderMenu ord) ord.Add(item);
+
             controlOrder.ScreenSwap(bb);
         }
 
@@ -89,7 +112,11 @@ namespace PointOfSale
         private void GardenOrcOmelette_Click(object sender, RoutedEventArgs e)
         {
             var controlOrder = this.FindAncestor<MainWindow>();
-            GardenOrcOmelettePOS bb = new GardenOrcOmelettePOS();
+            GardenOrcOmelette item = new GardenOrcOmelette();
+            GardenOrcOmelettePOS bb = new GardenOrcOmelettePOS(item);
+
+            if (DataContext is OrderMenu ord) ord.Add(item);
+
             controlOrder.ScreenSwap(bb);
         }
 
@@ -101,7 +128,11 @@ namespace PointOfSale
         private void PhillyPoacher_Click(object sender, RoutedEventArgs e)
         {
             var controlOrder = this.FindAncestor<MainWindow>();
-            PhillyPoacherPOS bb = new PhillyPoacherPOS();
+            PhillyPoacher item = new PhillyPoacher();
+            PhillyPoacherPOS bb = new PhillyPoacherPOS(item);
+
+            if (DataContext is OrderMenu ord) ord.Add(item);
+
             controlOrder.ScreenSwap(bb);
         }
 
@@ -113,7 +144,11 @@ namespace PointOfSale
         private void ThugsTBone_Click(object sender, RoutedEventArgs e)
         {
             var controlOrder = this.FindAncestor<MainWindow>();
-            ThugsTBonePOS bb = new ThugsTBonePOS();
+            ThugsTBone item = new ThugsTBone();
+            ThugsTBonePOS bb = new ThugsTBonePOS(item);
+
+            if (DataContext is OrderMenu ord) ord.Add(item);
+
             controlOrder.ScreenSwap(bb);
         }
 
@@ -125,7 +160,11 @@ namespace PointOfSale
         private void SailorSoda_Click(object sender, RoutedEventArgs e)
         {
             var controlOrder = this.FindAncestor<MainWindow>();
-            SailorSodaPOS bb = new SailorSodaPOS();
+            SailorSoda item = new SailorSoda();
+            SailorSodaPOS bb = new SailorSodaPOS(item);
+
+            if (DataContext is OrderMenu ord) ord.Add(item);
+
             controlOrder.ScreenSwap(bb);
         }
 
@@ -137,7 +176,11 @@ namespace PointOfSale
         private void MarkarthMilk_Click(object sender, RoutedEventArgs e)
         {
             var controlOrder = this.FindAncestor<MainWindow>();
-            MarkarthMilkPOS bb = new MarkarthMilkPOS();
+            MarkarthMilk item = new MarkarthMilk();
+            MarkarthMilkPOS bb = new MarkarthMilkPOS(item);
+
+            if (DataContext is OrderMenu ord) ord.Add(item);
+
             controlOrder.ScreenSwap(bb);
         }
 
@@ -149,7 +192,11 @@ namespace PointOfSale
         private void AretinoAppleJuice_Click(object sender, RoutedEventArgs e)
         {
             var controlOrder = this.FindAncestor<MainWindow>();
-            AretinoAppleJuicePOS bb = new AretinoAppleJuicePOS();
+            AretinoAppleJuice item = new AretinoAppleJuice();
+            AretinoAppleJuicePOS bb = new AretinoAppleJuicePOS(item);
+
+            if (DataContext is OrderMenu ord) ord.Add(item);
+
             controlOrder.ScreenSwap(bb);
         }
 
@@ -161,7 +208,11 @@ namespace PointOfSale
         private void CandlehearthCoffee_Click(object sender, RoutedEventArgs e)
         {
             var controlOrder = this.FindAncestor<MainWindow>();
-            CandlehearthCoffeePOS bb = new CandlehearthCoffeePOS();
+            CandlehearthCoffee item = new CandlehearthCoffee();
+            CandlehearthCoffeePOS bb = new CandlehearthCoffeePOS(item);
+
+            if (DataContext is OrderMenu ord) ord.Add(item);
+
             controlOrder.ScreenSwap(bb);
         }
 
@@ -173,7 +224,11 @@ namespace PointOfSale
         private void WarriorWater_Click(object sender, RoutedEventArgs e)
         {
             var controlOrder = this.FindAncestor<MainWindow>();
-            WarriorWaterPOS bb = new WarriorWaterPOS();
+            WarriorWater item = new WarriorWater();
+            WarriorWaterPOS bb = new WarriorWaterPOS(item);
+
+            if (DataContext is OrderMenu ord) ord.Add(item);
+
             controlOrder.ScreenSwap(bb);
         }
 
@@ -185,7 +240,11 @@ namespace PointOfSale
         private void VokunSalad_Click(object sender, RoutedEventArgs e)
         {
             var controlOrder = this.FindAncestor<MainWindow>();
-            VokunSaladPOS bb = new VokunSaladPOS();
+            VokunSalad item = new VokunSalad();
+            VokunSaladPOS bb = new VokunSaladPOS(item);
+
+            if (DataContext is OrderMenu ord) ord.Add(item);
+
             controlOrder.ScreenSwap(bb);
         }
 
@@ -197,7 +256,11 @@ namespace PointOfSale
         private void FriedMiraak_Click(object sender, RoutedEventArgs e)
         {
             var controlOrder = this.FindAncestor<MainWindow>();
-            FriedMiraakPOS bb = new FriedMiraakPOS();
+            FriedMiraak item = new FriedMiraak();
+            FriedMiraakPOS bb = new FriedMiraakPOS(item);
+
+            if (DataContext is OrderMenu ord) ord.Add(item);
+
             controlOrder.ScreenSwap(bb);
         }
 
@@ -209,7 +272,11 @@ namespace PointOfSale
         private void MadOtarGrits_Click(object sender, RoutedEventArgs e)
         {
             var controlOrder = this.FindAncestor<MainWindow>();
-            MadOtarGritsPOS bb = new MadOtarGritsPOS();
+            MadOtarGrits item = new MadOtarGrits();
+            MadOtarGritsPOS bb = new MadOtarGritsPOS(item);
+
+            if (DataContext is OrderMenu ord) ord.Add(item);
+
             controlOrder.ScreenSwap(bb);
         }
 
@@ -221,7 +288,11 @@ namespace PointOfSale
         private void DragonbornWaffleFries_Click(object sender, RoutedEventArgs e)
         {
             var controlOrder = this.FindAncestor<MainWindow>();
-            DragonbornWaffleFriesPOS bb = new DragonbornWaffleFriesPOS();
+            DragonbornWaffleFries item = new DragonbornWaffleFries();
+            DragonbornWaffleFriesPOS bb = new DragonbornWaffleFriesPOS(item);
+
+            if (DataContext is OrderMenu ord) ord.Add(item);
+
             controlOrder.ScreenSwap(bb);
         }
     }

@@ -1,6 +1,6 @@
 ﻿/* Author: Roy Fernandez
- * Class: ThugsTBonePOS.xaml.cs
- * Purpose: A class for the Thugs T-Bone item
+ * Class: DragonbornWaffleFriesPOS.xaml.cs
+ * Purpose: A class for the Dragonborn Waffle Fries item
  */
 using System;
 using System.Collections.Generic;
@@ -14,22 +14,32 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data.Sides;
+using BleakwindBuffet.Data;
 
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for ThugsTBonePOS.xaml
+    /// Interaction logic for DragonbornWaffleFriesPOS.xaml
     /// </summary>
-    public partial class ThugsTBonePOS : UserControl
+    public partial class DragonbornWaffleFriesPOS : UserControl
     {
+        DragonbornWaffleFries df;
         /// <summary>
-        /// initializes the item
+        /// Initializes the item
         /// </summary>
-        public ThugsTBonePOS()
+        public DragonbornWaffleFriesPOS(DragonbornWaffleFries item)
         {
             InitializeComponent();
+            df = item;
+            DataContext = df;
         }
 
+        /// <summary>
+        /// Event handler for the Done button
+        /// </summary>
+        /// <param name="sender">What triggered this event</param>
+        /// <param name="e">The parameters of this event</param>
         private void doneButton_Click(object sender, RoutedEventArgs e)
         {
             var controlOrder = this.FindAncestor<MainWindow>();

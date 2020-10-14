@@ -1,6 +1,6 @@
 ﻿/* Author: Roy Fernandez
- * Class: GardenOrcOmelettePOS.xaml.cs
- * Purpose: A class for the GardenOrcOmelette item
+ * Class: PhillyPoacherPOS.xaml.cs
+ * Purpose: A class for the Philly Poacher Water item
  */
 using System;
 using System.Collections.Generic;
@@ -14,23 +14,25 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrees;
 
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for GardenOrcOmelettePOS.xaml
+    /// Interaction logic for PhillyPoacherPOS.xaml
     /// </summary>
-    public partial class GardenOrcOmelettePOS : UserControl
+    public partial class PhillyPoacherPOS : UserControl
     {
-        GardenOrcOmelette go = new GardenOrcOmelette();
+        PhillyPoacher pp;
         /// <summary>
         /// Initializes the item
         /// </summary>
-        public GardenOrcOmelettePOS()
+        public PhillyPoacherPOS(PhillyPoacher item)
         {
             InitializeComponent();
-            DataContext = go;
+            pp = item;
+            DataContext = pp;
         }
 
         /// <summary>
