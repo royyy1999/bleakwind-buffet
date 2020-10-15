@@ -26,17 +26,14 @@ namespace PointOfSale
     /// </summary>
     public partial class MenuSelection : UserControl
     {
-         OrderMenu o;
+         
           // Find a way to connect menu selection class to order
         /// <summary>
         /// Initializes buttons
         /// </summary>
         public MenuSelection()
         {
-            InitializeComponent();
-           
-            if (DataContext is OrderMenu o)
-                this.o = o;
+            InitializeComponent();    
         }
 
         

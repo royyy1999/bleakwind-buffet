@@ -16,7 +16,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Drinks;
-using BleakwindBuffet.Data;
 
 namespace PointOfSale
 {

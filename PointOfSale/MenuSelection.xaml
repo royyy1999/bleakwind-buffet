@@ -186,7 +186,7 @@
             Drinks
         </TextBlock>
         <TextBlock FontWeight="ExtraBold" Foreground="White" Grid.Row="0" Grid.Column="2" TextAlignment="Center" Margin="0,20,0,25" Grid.RowSpan="2">
-            Drinks
+            Sides
         </TextBlock>
     </Grid>
 </UserControl>

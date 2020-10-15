@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Author: Roy Fernandez
+ * Class: Combo.cs
+ * Purpose: Allows the user to order a combo of menu items
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;

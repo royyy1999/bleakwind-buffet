@@ -36,6 +36,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
                 sausagelink = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SausageLink"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             }
         }
 
@@ -53,6 +54,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
                 egg = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Egg"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             }
         }
 
@@ -70,6 +72,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
                 hashbrowns = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("HashBrowns"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             }
         }
 
@@ -87,6 +90,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
                 pancake = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Pancake"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             }
         }
 
@@ -102,22 +106,22 @@ namespace BleakwindBuffet.Data.Entrees
                 if (!SausageLink)
                 {
                     instructions.Add("Hold sausage");
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+
                 }
                 if (!Egg)
                 {
                     instructions.Add("Hold eggs");
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+
                 }
                 if (!HashBrowns)
                 {
                     instructions.Add("Hold hash browns");
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+
                 }
                 if (!Pancake)
                 {
                     instructions.Add("Hold pancakes");
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+
                 }
                 return instructions;
             }

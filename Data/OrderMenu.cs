@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Author: Roy Fernandez
+ * Class: OrderMenu.cs
+ * Purpose: Handles things transferring to the order list
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
@@ -37,11 +41,11 @@ namespace BleakwindBuffet.Data
 
         public void Remove(IOrderItem item)
         {
-            int index = list.FindIndex(i => i == item);
+            int index = list.IndexOf(item);
+            
+            CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Remove, item, index));
             var del = list.Remove(item);
-
-            CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Remove, index));
-            CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, item));
+  
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Total"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tax"));
@@ -81,7 +85,7 @@ namespace BleakwindBuffet.Data
         {
             list.CopyTo(array, arrayIndex);
         }
-
+        
         public IEnumerator GetEnumerator()
         {
             return ((IEnumerable)list).GetEnumerator();
@@ -96,7 +100,7 @@ namespace BleakwindBuffet.Data
         {
             throw new NotImplementedException();
         }
-
+        
         private double salestax = 0.12;
         public double SalesTax
         {

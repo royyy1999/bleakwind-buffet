@@ -2,6 +2,7 @@
  * Class: BriarheartBurgerPOS.xaml.cs
  * Purpose: A class for the Briarheart Burger item
  */
+
 using System;
 using System.Collections.Generic;
 using System.Text;

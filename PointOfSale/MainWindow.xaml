@@ -17,13 +17,13 @@
             Bleakwind Buffet
         </TextBlock>
 
-        
-        <Border Name="orderorder">
-            <local:Order Margin="554,19,-193,15"/>
+
+        <Border Name="orderorder" Grid.Column="1">
+            <local:Order Margin="0,26,10,19"/>
         </Border>
 
-        <Border x:Name="menuBorder">
-            <local:MenuSelection Margin="8,78,0,22" HorizontalAlignment="Left" Width="539" Loaded="MenuSelection_Loaded"/>
+        <Border x:Name="menuBorder" Margin="8,78,0,22">
+            <local:MenuSelection HorizontalAlignment="Left" Width="529"/>
         </Border>
 
     </Grid>
