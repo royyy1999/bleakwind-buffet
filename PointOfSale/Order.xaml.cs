@@ -42,6 +42,8 @@ namespace PointOfSale
                 ord = new OrderMenu();
                 var i = this.FindAncestor<MainWindow>();
                 i.DataContext = ord;
+                PaymentOptions p = new PaymentOptions();
+                i.ScreenSwap(p);
             }
           
         }
