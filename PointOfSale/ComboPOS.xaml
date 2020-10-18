@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="PointOfSale.ComboPOS"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PointOfSale"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListBox Grid.ColumnSpan="2"  Background="Red">
+            <TextBlock FontWeight="ExtraBold" FontSize="23">Combo Menu</TextBlock>
+            <CheckBox IsChecked="{Binding Path=Bun}" Foreground="White" FontWeight="ExtraBold">Bun</CheckBox>
+            <CheckBox IsChecked="{Binding Path=Ketchup}" Foreground="White" FontWeight="ExtraBold">Ketchup</CheckBox>
+            <Button FontSize="24" Background="Black" Foreground="Red" FontWeight="ExtraBold" Name="doneButton" Click="doneButton_Click">
+                Done
+            </Button>
+        </ListBox>
+    </Grid>
+</UserControl>
