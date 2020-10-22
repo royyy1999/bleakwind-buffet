@@ -11,6 +11,9 @@
             <TextBlock FontWeight="ExtraBold" FontSize="23">Payment Options</TextBlock>
             <Button FontSize="24" Background="Black" Foreground="White" FontWeight="ExtraBold" Content="Credit/Debit"  Click="Card_Click"/>
             <Button FontSize="24"  Background="Black" Foreground="White" FontWeight="ExtraBold" Content="Cash" Click="Cash_Click"/>
+            <Button FontSize="24" Background="Black" Foreground="rED" FontWeight="ExtraBold" Name="doneButton"  Click="doneButton_Click">
+                Done
+            </Button>
         </ListBox>
     </Grid>
 </UserControl>

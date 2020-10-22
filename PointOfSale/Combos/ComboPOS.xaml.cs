@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BleakwindBuffet.Data;
+using PointOfSale.Combos;
 
 namespace PointOfSale
 {
@@ -19,13 +20,11 @@ namespace PointOfSale
     /// </summary>
     public partial class ComboPOS : UserControl
     {
-        Combo c;
         public ComboPOS(Combo item)
         {
             InitializeComponent();
-            c = item;
+            Combo c = new Combo();
             DataContext = c;
-
         }
 
         /// <summary>
@@ -37,6 +36,27 @@ namespace PointOfSale
         {
             var controlOrder = this.FindAncestor<MainWindow>();
             MenuSelection m = new MenuSelection();
+            controlOrder.ScreenSwap(m);
+        }
+
+        private void EntreeButton_Click(object sender, RoutedEventArgs e)
+        {
+            var controlOrder = this.FindAncestor<MainWindow>();
+            EntreeCombo m = new EntreeCombo((Combo)DataContext);
+            controlOrder.ScreenSwap(m);
+        }
+
+        private void DrinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            var controlOrder = this.FindAncestor<MainWindow>();
+            DrinkCombo m = new DrinkCombo((Combo)DataContext);
+            controlOrder.ScreenSwap(m);
+        }
+
+        private void SideButton_Click(object sender, RoutedEventArgs e)
+        {
+            var controlOrder = this.FindAncestor<MainWindow>();
+            SideCombo m = new SideCombo((Combo)DataContext);
             controlOrder.ScreenSwap(m);
         }
     }

@@ -17,6 +17,11 @@ namespace BleakwindBuffet.Data
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public Combo()
+        {
+
+        }
+
         private Entree entree;
         public Entree Entree
         {
@@ -46,7 +51,6 @@ namespace BleakwindBuffet.Data
             set
             {
                 side = value;
-                side.Size = size;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Side"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
@@ -65,7 +69,6 @@ namespace BleakwindBuffet.Data
             set
             {
                 drink = value;
-                drink.Size = size;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Drink"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
@@ -97,7 +100,20 @@ namespace BleakwindBuffet.Data
         {
             get
             {
-                return (Entree.Price + Side.Price + Drink.Price - 1); 
+                var price = 0.0;
+                if(Entree != null)
+                {
+                    price += Entree.Price;
+                }
+                if (Drink != null)
+                {
+                    price += Drink.Price;
+                }
+                if (Side != null)
+                {
+                    price += Side.Price;
+                }
+                return price;
             }
         }
 
@@ -108,7 +124,20 @@ namespace BleakwindBuffet.Data
         {
             get
             {
-                return (Entree.Calories + Side.Calories + Drink.Calories);
+                uint cal = 0;
+                if (Entree != null)
+                {
+                    cal += Entree.Calories;
+                }
+                if (Drink != null)
+                {
+                    cal += Drink.Calories;
+                }
+                if (Side != null)
+                {
+                    cal += Side.Calories;
+                }
+                return cal;
             }
         }
 
@@ -120,9 +149,16 @@ namespace BleakwindBuffet.Data
             get
             {
                 List<string> list = new List<string>();
+
+                list.Add(Entree.ToString());
                 list.AddRange(Entree.SpecialInstructions);
+
+                list.Add(Side.ToString());
                 list.AddRange(Side.SpecialInstructions);
+
+                list.Add(Drink.ToString());
                 list.AddRange(Drink.SpecialInstructions);
+
                 return list;
 
             }

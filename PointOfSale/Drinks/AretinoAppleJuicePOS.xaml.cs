@@ -44,6 +44,7 @@ namespace PointOfSale
         {
             var controlOrder = this.FindAncestor<MainWindow>();
             MenuSelection m = new MenuSelection();
+
             controlOrder.ScreenSwap(m);
         }
     }

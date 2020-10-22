@@ -16,12 +16,14 @@ namespace PointOfSale
     /// <summary>
     /// Interaction logic for Cash.xaml
     /// </summary>
-    public partial class Cash : UserControl
+    public partial class Cash: UserControl
     {
         public Cash()
         {
             InitializeComponent();
         }
+
+
 
         private void Finalize_Click(object sender, RoutedEventArgs e)
         {

@@ -13,9 +13,10 @@
         </Grid.ColumnDefinitions>
         <ListBox Grid.ColumnSpan="2"  Background="Red">
             <TextBlock FontWeight="ExtraBold" FontSize="23">Combo Menu</TextBlock>
-            <Button FontSize="24" Background="Black" Foreground="Red" FontWeight="ExtraBold" Name="doneButton" Click="doneButton_Click">
-                Done
-            </Button>
+            <Button FontSize="35" Background="Black" Foreground="White"  FontWeight="ExtraBold" Click="EntreeButton_Click">Entree</Button>
+            <Button FontSize="35" Background="Black" Foreground="White" FontWeight="ExtraBold" Click="DrinkButton_Click">Drink</Button>
+            <Button FontSize="35" Background="Black" Foreground="White" FontWeight="ExtraBold" Click="SideButton_Click">Side</Button>
+            <Button FontSize="25" Background="Black" Foreground="Red" FontWeight="ExtraBold" Click="doneButton_Click">Done</Button>
         </ListBox>
     </Grid>
 </UserControl>

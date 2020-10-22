@@ -299,8 +299,6 @@ namespace PointOfSale
             Combo item = new Combo();
             ComboPOS c = new ComboPOS(item);
 
-            if (DataContext is OrderMenu ord) ord.Add(item);
-
             controlOrder.ScreenSwap(c);
         }
     }
