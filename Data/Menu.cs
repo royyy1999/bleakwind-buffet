@@ -16,6 +16,7 @@ namespace BleakwindBuffet.Data
 {
     public static class Menu
     {
+
         /// <summary>
         /// Returns a List of all entrees offered
         /// </summary>

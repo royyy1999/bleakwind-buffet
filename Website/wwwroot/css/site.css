@@ -35,3 +35,21 @@ body {
         display: none;
     }
 }
+
+.menu-item{
+    color: red;
+    text-align: center;
+    font-family: 'Tisa Pro Regular';
+    font-size: 20px;
+}
+
+.item-type{
+    text-decoration: underline;
+    border-top: 1px solid black;
+    text-align: center;
+    font-weight: bold; 
+    font-family: 'Calibri';
+    font-size: 40px;
+
+}
+
