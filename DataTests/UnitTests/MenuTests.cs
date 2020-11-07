@@ -173,8 +173,19 @@ namespace BleakwindBuffet.DataTests.UnitTests
 
             Assert.Equal(expLength, list.Count);
         }
-        
-        
+
+        [Theory]
+        [InlineData("Entree")]
+        [InlineData("Side")]
+        [InlineData("Drink")]
+        public void MenuCanBeFilteredByCategory(string type)
+        {
+            List<IOrderItem> menu = (List<IOrderItem>)Menu.FullMenu();
+            List<string> name = new List<string>();
+            name.Add(type);
+            Assert.Contains(Menu.FilterByCategory(menu, name), (item) => { return item.ToString().Equals("Large Mad Otar Grits"); });
+        }
+
     }
 }
         

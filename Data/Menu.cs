@@ -175,5 +175,139 @@ namespace BleakwindBuffet.Data
 
             return wholeMenu;
         }
+
+        public static IEnumerable<IOrderItem> Search(IEnumerable<IOrderItem> list, string s)
+        {
+            List<IOrderItem> result = new List<IOrderItem>();
+            
+            if(s == null)
+            {
+                return FullMenu();
+            }
+
+            foreach(IOrderItem item in list)
+            {
+                if (item.ToString() != null && item.ToString().ToLower().Contains(s.ToLower()))
+                {
+                    result.Add(item);
+                }
+            }
+
+            return result;
+        }
+
+        public static IEnumerable<IOrderItem> FilterByCategory(IEnumerable<IOrderItem> list, IEnumerable<string> s)
+        {
+            if (s == null || s.Count() == 0)
+            {
+                return list;
+            }
+
+            var result = new List<IOrderItem>();
+
+            foreach(IOrderItem item in list)
+            {
+                if (s.Contains("Entree"))
+                {
+                    if(item is Entree)
+                    {
+                        result.Add(item);
+                    }
+                }
+                if (s.Contains("Side"))
+                {
+                    if (item is Side)
+                    {
+                        result.Add(item);
+                    }
+                }
+                if (s.Contains("Drink"))
+                {
+                    if (item is Drink)
+                    {
+                        result.Add(item);
+                    }
+                }
+            }
+
+            return result;
+        }
+
+        public static IEnumerable<IOrderItem> FilterByCalories(IEnumerable<IOrderItem> item, int? min, int? max)
+        {
+            if (min == null && max == null) return item;
+
+            var results = new List<IOrderItem>();
+
+            // only a maximum specified
+            if (min == null)
+            {
+                foreach (IOrderItem food in FullMenu())
+                {
+                    if (food.Calories <= max) results.Add(food);
+                }
+                return results;
+            }
+
+            // only a minimum specified
+            if (max == null)
+            {
+                foreach (IOrderItem food in FullMenu())
+                {
+                    if (food.Calories >= min) results.Add(food);
+                }
+                return results;
+            }
+
+            // Both minimum and maximum specified
+            foreach (IOrderItem food in FullMenu())
+            {
+                if (food.Calories >= min && food.Price <= max)
+                {
+                    results.Add(food);
+                }
+            }
+            return results;
+        }
+
+        public static IEnumerable<IOrderItem> FilterByPrice(IEnumerable<IOrderItem> item, double? min, double? max)
+        {
+            if (min == null && max == null) return item;
+
+            var results = new List<IOrderItem>();
+
+            // only a maximum specified
+            if (min == null)
+            {
+                foreach (IOrderItem food in FullMenu())
+                {
+                    if (food.Price <= max) results.Add(food);
+                }
+                return results;
+            }
+
+            // only a minimum specified
+            if (max == null)
+            {
+                foreach (IOrderItem food in FullMenu())
+                {
+                    if (food.Price >= min) results.Add(food);
+                }
+                return results;
+            }
+
+            // Both minimum and maximum specified
+            foreach (IOrderItem food in FullMenu())
+            {
+                if (food.Price >= min && food.Price <= max)
+                {
+                    results.Add(food);
+                }
+            }
+            return results;
+
+        }
+
     }
 }
+
