@@ -22,10 +22,6 @@ namespace Website.Pages
         public List<IOrderItem> Side { get; set; }
 
         public List<IOrderItem> Drink { get; set; }
-        public IndexModel()
-        {
-
-        }
 
         public void OnGet(string SearchItem, IEnumerable<string> foodType, double? PriceMin, double? PriceMax, int? CalMin, int? CalMax)
         {
