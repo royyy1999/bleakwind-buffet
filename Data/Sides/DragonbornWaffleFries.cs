@@ -65,6 +65,17 @@ namespace BleakwindBuffet.Data.Sides
         }
 
         /// <summary>
+        /// Description of the item
+        /// </summary>
+        public override string Description
+        {
+            get
+            {
+                return ("Crispy fried potato waffle fries.");
+            }
+        }
+
+        /// <summary>
         /// Converts users order to a string
         /// </summary>
         /// <returns>Users order</returns>

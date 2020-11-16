@@ -63,6 +63,17 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
+        /// <summary>
+        /// Description of the item
+        /// </summary>
+        public override string Description
+        {
+            get
+            {
+                return ("Cheesey Grits.");
+            }
+        }
+
 
         /// <summary>
         /// Converts users order to a string.

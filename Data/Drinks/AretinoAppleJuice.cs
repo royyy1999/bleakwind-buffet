@@ -87,6 +87,17 @@ namespace BleakwindBuffet.Data.Drinks
         }
 
         /// <summary>
+        /// Description of the item
+        /// </summary>
+        public override string Description
+        {
+            get 
+            {
+                return ("Fresh squeezed apple juice.");
+            }
+        }
+
+        /// <summary>
         /// Converts users order to a string
         /// </summary>
         /// <returns>Users drink</returns>

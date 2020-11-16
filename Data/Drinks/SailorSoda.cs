@@ -109,6 +109,17 @@ namespace BleakwindBuffet.Data.Drinks
         }
 
         /// <summary>
+        /// Description of the item
+        /// </summary>
+        public override string Description
+        {
+            get
+            {
+                return ("An old-fashioned jerked soda, carbonated water and flavored syrup poured over a bed of crushed ice.");
+            }
+        }
+
+        /// <summary>
         /// Converts users order to a string.
         /// </summary>
         /// <returns>Users drink</returns>

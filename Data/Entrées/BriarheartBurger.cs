@@ -150,6 +150,17 @@ namespace BleakwindBuffet.Data.Entrees
         }
 
         /// <summary>
+        /// Description of the item
+        /// </summary>
+        public override string Description
+        {
+            get
+            {
+                return ("Single patty burger on a brioche bun. Comes with ketchup, mustard, pickle, and cheese.");
+            }
+        }
+
+        /// <summary>
         /// Converts users order to a string.
         /// </summary>
         /// <returns>Users order</returns>

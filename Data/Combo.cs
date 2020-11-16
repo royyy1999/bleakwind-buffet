@@ -164,5 +164,10 @@ namespace BleakwindBuffet.Data
             }
         }
 
+        /// <summary>
+        /// Returns a string of the description of the item
+        /// </summary>
+        /// <return>A string of the description</return>
+        public string Description { get; }
     }
 }

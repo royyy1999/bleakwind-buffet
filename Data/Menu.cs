@@ -262,7 +262,7 @@ namespace BleakwindBuffet.Data
             // Both minimum and maximum specified
             foreach (IOrderItem food in FullMenu())
             {
-                if (food.Calories >= min && food.Price <= max)
+                if (food.Calories >= min && food.Calories <= max)
                 {
                     results.Add(food);
                 }
